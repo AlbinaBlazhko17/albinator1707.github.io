@@ -1,6 +1,39 @@
 .main {
-    position: absolute;
+    position: relative;
     &__bg {
-
+        img {
+            display: block;
+        }
+        :nth-child(1) {
+            position: absolute;
+            right: -0.78%;
+            top: 6.09%;
+            width: 631.42px;
+            height: 255.37px;
+            background: #FE3CB9;
+            filter: blur(150px);
+            transform: matrix(0.87, 0.54, -0.47, 0.86, 0, 0);
+        }
+        :nth-child(2) {
+            position: absolute;
+            right: -1.12%;
+            top: 26.63%;
+            width: 1094.78px;
+            height: 317.72px;
+            background: #793AFF;
+            filter: blur(150px);
+            transform: matrix(0.97, -0.22, 0.22, 0.98, 0, 0);
+        }
+        :nth-child(3) {
+            position: absolute;
+            right: 26.82%;
+            top: 7.52%;
+            width: 535.13px;
+            height: 323.51px;
+            background: #69FFFF;
+            filter: blur(150px);
+            transform: matrix(0.8, -0.62, 0.6, 0.79, 0, 0);
+        }
     }
+    
 }

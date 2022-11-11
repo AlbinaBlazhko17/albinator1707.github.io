@@ -3,8 +3,8 @@
     height: 88px;
     display: flex;
     justify-content: space-between;
-    position: relative;
     &__tabs {
+        position: relative;
         width: 410px;
         display: flex;
         justify-content: space-around;
@@ -36,5 +36,4 @@
             background: #5221E6;
         }
     }
-
 }
