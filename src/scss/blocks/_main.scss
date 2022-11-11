@@ -35,5 +35,12 @@
             transform: matrix(0.8, -0.62, 0.6, 0.79, 0, 0);
         }
     }
-    
+
+    &__img {
+        margin-top: 48px;
+        img {
+            display: block;
+        }
+    }
+
 }
