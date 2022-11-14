@@ -17,6 +17,8 @@
             background: #FE3CB9;
             filter: blur(150px);
             transform: matrix(0.87, 0.54, -0.47, 0.86, 0, 0);
+            animation: rotateBubbles 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+            transition: all 0.25s ease-out;
         }
         :nth-child(2) {
             position: absolute;
@@ -27,6 +29,8 @@
             background: #793AFF;
             filter: blur(150px);
             transform: matrix(0.97, -0.22, 0.22, 0.98, 0, 0);
+            animation: rotateBubbles 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+            transition: all 0.25s ease-out;
         }
         :nth-child(3) {
             position: absolute;
@@ -37,6 +41,8 @@
             background: #69FFFF;
             filter: blur(150px);
             transform: matrix(0.8, -0.62, 0.6, 0.79, 0, 0);
+            animation: rotateBubbles 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+            transition: all 0.25s ease-out;
         }
     }
 
