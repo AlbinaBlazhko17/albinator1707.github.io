@@ -1,9 +1,11 @@
 .diplomas {
+    margin-top: 100px;
     position: relative;
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 250px;
     scroll-snap-align: start;
+    scroll-snap-align: center;
     &::after {
         @include dipomasBorder;
         background-image: conic-gradient(transparent, transparent, transparent, #FB37FF);
@@ -20,7 +22,7 @@
     span {
         position: absolute;
         inset: 5px;
-        border-radius: 16px;
+        border-radius: 25px;
         background: #0c1022;
         z-index: 1;
     }
@@ -51,13 +53,13 @@
         &__title {
             margin-bottom: 5px;
             font-size: 24px;
-            &-green {
+            &_green {
                 color: #3CC74E;
             }
-            &-violet {
+            &_violet {
                 color: #5221E6;
             }
-            &-pink {
+            &_pink {
                 color: #E95D90;
             }
         }
