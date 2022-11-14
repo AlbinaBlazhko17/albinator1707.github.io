@@ -1,0 +1,69 @@
+.diplomas {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 250px;
+    scroll-snap-align: start;
+    &::after {
+        @include dipomasBorder;
+        background-image: conic-gradient(transparent, transparent, transparent, #FB37FF);
+        animation: animateBorder 4s linear infinite;
+        animation-delay: -2s;
+    }
+
+    &::before {
+        @include dipomasBorder;
+        background-image: conic-gradient(transparent, transparent, transparent, #18B2DE);
+        animation: animateBorder 4s linear infinite;
+    }
+
+    span {
+        position: absolute;
+        inset: 5px;
+        border-radius: 16px;
+        background: #0c1022;
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+        height: 600px;
+        padding: 50px 70px 30px 100px;
+        z-index: 2;
+    }
+
+    &__list {
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    &-item {
+        &__number {
+            font-weight: 400;
+            font-size: 117px;
+            line-height: 120%;
+            color: #8491A0;
+        }
+
+        &__title {
+            margin-bottom: 5px;
+            font-size: 24px;
+            &-green {
+                color: #3CC74E;
+            }
+            &-violet {
+                color: #5221E6;
+            }
+            &-pink {
+                color: #E95D90;
+            }
+        }
+        
+        &__descr {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@mixin mainBorder {
+    content: "";
+    position: absolute;
+    aspect-ratio: 1;
+    width: 67px;
+    height: 65px;
+    inset: 0;
+    border-radius: 8px; 
+    padding: 4.45px; 
+}
+
+@mixin dipomasBorder {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 450%;
+    top: -175%;
+    left: -10%;
+}

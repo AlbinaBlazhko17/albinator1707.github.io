@@ -2,14 +2,16 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    column-gap: 100px;
+    scroll-snap-align: start;
+    grid-template-columns: 740px 1fr;
     &__bg {
         z-index: -1;
         :nth-child(1) {
             position: absolute;
+            top: 14%;
             right: 10.78%;
-            top: 8.09%;
             width: 631.42px;
             height: 255.37px;
             background: #FE3CB9;
@@ -18,8 +20,8 @@
         }
         :nth-child(2) {
             position: absolute;
-            right: 3.12%;
-            top: 35.63%;
+            right: 7.12%;
+            top: 52.63%;
             width: 1094.78px;
             height: 317.72px;
             background: #793AFF;
@@ -28,8 +30,8 @@
         }
         :nth-child(3) {
             position: absolute;
-            right: 40.82%;
-            top: 13.52%;
+            right: 34.82%;
+            top: 19.52%;
             width: 535.13px;
             height: 323.51px;
             background: #69FFFF;
@@ -37,10 +39,11 @@
             transform: matrix(0.8, -0.62, 0.6, 0.79, 0, 0);
         }
     }
+
     &__img {
         position: absolute;
         z-index: 2;
-        margin-top: 48px;
+        margin-top: 150px;
         margin-left: 20px;
         width: 701px;
         height: 661px;
@@ -109,16 +112,9 @@
         &-tg{
             position: relative;
             &::before {
-                content: "";
-                position: absolute;
-                margin-top: -15px;
-                margin-left: -17px;
-                aspect-ratio: 1;
-                width: 67px;
-                height: 65px;
-                inset: 0;
-                border-radius: 8px; 
-                padding: 4.45px; 
+                @include mainBorder;
+                margin-top: -16px;
+                margin-left: -18px;
                 background:  linear-gradient(132.33deg, #D24074 -0.67%, #6518B4 102.54%);
                 -webkit-mask: 
                 linear-gradient(#fff 0 0) content-box, 
@@ -126,23 +122,14 @@
                 -webkit-mask-composite: xor;
                 mask-composite: exclude; 
             }
-            img {
-                display: block;
-            }
         }
 
         &-link{
             position: relative;
             &::before {
-                content: "";
-                position: absolute;
-                width: 67px;
-                height: 65px;
+                @include mainBorder;
                 margin-top: -14px;
                 margin-left: -17px;
-                inset: 0;
-                border-radius: 8px; 
-                padding: 4.45px; 
                 background: linear-gradient(45.4deg, #F4426C 6.41%, #FBF2B1 98.99%);
                 -webkit-mask: 
                    linear-gradient(#fff 0 0) content-box, 
@@ -155,15 +142,9 @@
         &-git{
             position: relative;
             &::before {
-                content: "";
-                position: absolute;
-                width: 67px;
-                height: 65px;
+                @include mainBorder;
                 margin-top: -15px;
-                margin-left: -16px;
-                inset: 0;
-                border-radius: 8px; 
-                padding: 4.45px; 
+                margin-left: -16px; 
                 background: linear-gradient(135deg, #6964DE 2.88%, #FCA6E9 100%);
                 -webkit-mask: 
                    linear-gradient(#fff 0 0) content-box, 
@@ -176,15 +157,9 @@
         &-mail{
             position: relative;
             &::before {
-                content: "";
-                position: absolute;
-                width: 67px;
-                height: 65px;
-                inset: 0;
+                @include mainBorder;
                 margin-top: -22px;
                 margin-left: -17px;
-                border-radius: 8px; 
-                padding: 4.45px; 
                 background:  linear-gradient(51.06deg, #9358F7 0.87%, #10D7E2 97.48%);
                 -webkit-mask: 
                    linear-gradient(#fff 0 0) content-box, 

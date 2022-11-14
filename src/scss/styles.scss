@@ -2,6 +2,7 @@
 
 body {
     background-color: #000;
+    scroll-snap-type: y mandatory;
 }
 * {
     font-family: 'Sen', sans-serif;
@@ -10,6 +11,19 @@ body {
     color: white;
 }
 
-@import 'blocks/_header';
-@import 'blocks/_main';
+.wrapper {
+    position: relative;
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+@import 'base/mixins.scss';
+@import 'base/animation.scss';
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/diplomas';
+@import 'blocks/titles';
+@import 'blocks/subtitles';
+
 
