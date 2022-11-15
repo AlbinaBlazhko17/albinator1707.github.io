@@ -57,7 +57,7 @@
         stroke: url(#progressYellow);
         stroke-width: 30px;
         stroke-dasharray: 900;
-        stroke-dashoffset: 110%;
+        stroke-dashoffset: 111%;
         transform: rotate(-90deg);
         transform-origin: 200px 195px;
     }
@@ -73,16 +73,7 @@
     }
 
     .active {
-        animation: progress 5s linear forwards;
-    }
-
-    @keyframes progress {
-        from {
-            stroke-dasharray: 57% 900;
-          }
-          to {
-            stroke-dasharray: 900 900;
-          }
+        animation: progress 3s linear forwards;
     }
 
     &__subtitle {

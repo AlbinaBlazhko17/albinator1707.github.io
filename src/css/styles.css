@@ -34,6 +34,14 @@ body {
     transform: rotate(360deg) translate(-165px) rotate(-360deg);
   }
 }
+@keyframes progress {
+  from {
+    stroke-dasharray: var(--stroke-dashoffset) 900;
+  }
+  to {
+    stroke-dasharray: 900 900;
+  }
+}
 .header {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -404,7 +412,7 @@ body {
   stroke: url(#progressYellow);
   stroke-width: 30px;
   stroke-dasharray: 900;
-  stroke-dashoffset: 110%;
+  stroke-dashoffset: 111%;
   transform: rotate(-90deg);
   transform-origin: 200px 195px;
 }
@@ -418,15 +426,7 @@ body {
   transform-origin: 200px 195px;
 }
 .skills .active {
-  animation: progress 5s linear forwards;
-}
-@keyframes progress {
-  from {
-    stroke-dasharray: 57% 900;
-  }
-  to {
-    stroke-dasharray: 900 900;
-  }
+  animation: progress 3s linear forwards;
 }
 .skills__subtitle {
   font-size: 24px;

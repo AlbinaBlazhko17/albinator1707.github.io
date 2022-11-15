@@ -14,9 +14,18 @@
                   rotate(0deg);
       
       }
-      100%{
-        transform:rotate(360deg)
-                  translate(-165px)
-                  rotate(-360deg);
+    100%{
+    transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+}
+
+@keyframes progress {
+    from {
+        stroke-dasharray: var(--stroke-dashoffset) 900;
       }
-  }
+    to {
+        stroke-dasharray: 900 900;
+    }
+}
