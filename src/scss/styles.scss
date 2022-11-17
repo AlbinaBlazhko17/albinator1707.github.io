@@ -11,14 +11,15 @@ body {
 }
 
 .wrapper {
+    width: 100%;
     position: relative;
     max-height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
-@import 'base/mixins.scss';
-@import 'base/animation.scss';
+@import 'base/mixins';
+@import 'base/animation';
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/diplomas';

@@ -10,8 +10,8 @@
         z-index: -1;
         :nth-child(1) {
             position: absolute;
-            top: 14%;
-            right: 10.78%;
+            top: 20%;
+            right: 2%;
             width: 631.42px;
             height: 255.37px;
             background: #FE3CB9;
@@ -22,7 +22,7 @@
         }
         :nth-child(2) {
             position: absolute;
-            right: 7.12%;
+            right: 8.12%;
             top: 52.63%;
             width: 1094.78px;
             height: 317.72px;
@@ -69,7 +69,7 @@
     }
     
     &__about {
-        width: 1300px;
+        width: 100%;
         height: 100vh;
         padding-top: 150px;
     }
