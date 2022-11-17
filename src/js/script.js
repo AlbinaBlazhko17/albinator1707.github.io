@@ -1,3 +1,6 @@
+window.addEventListener('DOMContentLoaded', AOS.init);
+window.addEventListener('load', AOS.refresh);
+
 const main = document.querySelector('.wrapper'),
       percent = document.querySelectorAll('.skills__percent'),
       listOfCircles = [...document.querySelectorAll('.circle')];
@@ -41,5 +44,18 @@ $('.slider').slick({
     prevArrow: '<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
     nextArrow: ' <div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>'
 });
+
+// const button = document.querySelectorAll('.projects__button');
+
+// addEventListener('mouseover', (event) => {
+//     button.forEach ((btn) => btn.style.willChange = 'transform');
+
+// });
+
+// addEventListener('mouseout', (event) => {
+//     button.forEach ((btn) => btn.style.willChange = '');
+// })
+
+
 
  
