@@ -1,0 +1,35 @@
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 200px;
+    padding: 0 200px;
+    gap: 50px;
+    &-item {
+        box-sizing: border-box;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        border: 1px solid #181823;
+        img {
+            display: block;
+        }
+    }
+}
+
+.slick {
+    &-arrow {
+        img {
+            width: 20px;
+            height: 25px;
+        }
+    }
+    &-active {
+        &:nth-child(7n) {
+            width: 188px !important;
+            border-right: 2px solid #181823;
+        }
+    }
+}

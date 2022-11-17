@@ -2,7 +2,6 @@
 
 body {
     background-color: #000;
-    scroll-snap-type: y mandatory;
 }
 * {
     font-family: 'Sen', sans-serif;
@@ -26,5 +25,7 @@ body {
 @import 'blocks/titles';
 @import 'blocks/subtitles';
 @import 'blocks/skills';
+@import 'blocks/slider';
+@import 'blocks/projects';
 
 

@@ -115,7 +115,6 @@ const scrollEvent = () => {
       el.classList.add('active');
       if (!timer[i]) {
         timer[i] = setInterval(() => setPerc(document.querySelectorAll('.skills__percent')[i].getAttribute('data-value'), i), 100);
-        console.log('start');
       }
       ;
     });
@@ -126,6 +125,13 @@ const scrollEvent = () => {
   }
 };
 main.addEventListener('scroll', scrollEvent);
+$('.slider').slick({
+  infinite: true,
+  slidesToShow: 7,
+  slidesToScroll: 7,
+  prevArrow: '<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
+  nextArrow: ' <div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>'
+});
 
 /***/ })
 
