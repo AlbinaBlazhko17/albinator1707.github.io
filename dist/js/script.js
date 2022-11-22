@@ -135,17 +135,6 @@ $('.slider').slick({
   nextArrow: ' <div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>'
 });
 
-// const button = document.querySelectorAll('.projects__button');
-
-// addEventListener('mouseover', (event) => {
-//     button.forEach ((btn) => btn.style.willChange = 'transform');
-
-// });
-
-// addEventListener('mouseout', (event) => {
-//     button.forEach ((btn) => btn.style.willChange = '');
-// })
-
 /***/ })
 
 /******/ });

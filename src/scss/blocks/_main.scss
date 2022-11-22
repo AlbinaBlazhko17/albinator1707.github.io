@@ -56,6 +56,7 @@
         img {
             display: block;
         }
+        animation: 1s ease-out 0s 1 slideInFromLeft;
     }
 
     &__imgbg {
@@ -73,6 +74,21 @@
         height: 100vh;
         padding-top: 150px;
     }
+
+    &__info {
+        div {
+            opacity: 0;
+            animation-name: slideInFromRight;
+            animation-duration: 1s; 
+            animation-delay: 0s;
+            animation-fill-mode: forwards;
+            &:last-child {
+                opacity: 0;
+                animation-delay: 0.2s;
+            }
+        } 
+    }
+
 
     &__hello {
         img {
@@ -102,6 +118,7 @@
         color: #5221E6;
         white-space: nowrap;
     }
+
     &__descr {
         font-weight: 400;
         font-size: 18px;
