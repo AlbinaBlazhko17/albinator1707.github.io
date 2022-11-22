@@ -45,21 +45,19 @@ body {
 @keyframes hoverCards {
   from {
     will-change: transform;
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(1.02, 1.02, 1);
+  }
+}
+@keyframes hoverCardsArrow {
+  from {
+    will-change: transform;
     transform: translate3d(48px, 48px, 0px);
   }
   to {
     transform: translate3d(1px, 1px, 0px);
-  }
-}
-@keyframes addCards {
-  from {
-    will-change: transform, opacity;
-    transform: scale3d(0.85, 0.85, 0);
-    opacity: 0;
-  }
-  to {
-    transform: scale3d(1, 1, 0);
-    opacity: 1;
   }
 }
 .header {
@@ -483,7 +481,7 @@ body {
   height: 25px;
 }
 .slick-active:nth-child(7n) {
-  width: 188px !important;
+  width: 223px !important;
   border-right: 2px solid #181823;
 }
 
@@ -508,17 +506,12 @@ body {
   display: inline-block;
   margin-bottom: 40px;
 }
-.projects-item_animation {
-  animation: hoverCards 0.5s forwards;
-}
 .projects-item:hover {
-  will-change: transform;
-  transition: transform 0.4s;
-  transform: scale3d(1.02, 1.02, 1);
-}
-.projects-item:hover .projects__button {
-  display: flex;
   animation: hoverCards 0.5s forwards;
+}
+.projects-item:hover .projects__link {
+  display: flex;
+  animation: hoverCardsArrow 0.5s forwards;
 }
 .projects__descr {
   position: relative;
@@ -548,7 +541,6 @@ body {
   margin-bottom: 20px;
 }
 .projects__link {
-  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -623,6 +615,7 @@ body {
   align-items: center;
 }
 .business__button button {
+  cursor: pointer;
   width: 60%;
   border: none;
   margin-top: 40px;

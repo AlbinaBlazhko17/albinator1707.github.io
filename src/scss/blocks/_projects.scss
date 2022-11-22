@@ -19,18 +19,20 @@
         display: inline-block;
         margin-bottom: 40px;
 
-        &_animation {
-            animation: hoverCards 0.5s forwards;
-        }
+        // &_animation {
+        //     animation: hoverCards 0.5s forwards;
+        // }
 
         &:hover {
-            will-change: transform;
-            transition: transform 0.4s;
-            transform: scale3d(1.02,1.02,1);
-        }
-        &:hover .projects__button {
-            display: flex;
             animation: hoverCards 0.5s forwards;
+            // will-change: transform;
+            // transition: transform 0.4s;
+            // transform: scale3d(1.02,1.02,1);
+        }
+
+        &:hover .projects__link {
+            display: flex;
+            animation: hoverCardsArrow 0.5s forwards;
         }
     }
 
@@ -66,7 +68,6 @@
     }
 
     &__link {
-        display: none;
         justify-content: center;
         align-items: center;
         position: absolute;
@@ -107,5 +108,4 @@
             background: rgba(82, 33, 230, 1);
         }
     }
-
 }

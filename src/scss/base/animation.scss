@@ -29,24 +29,23 @@
         stroke-dasharray: 900 900;
     }
 }
+
 @keyframes hoverCards {
+    from {
+        will-change: transform;
+        transform: scale3d(1,1,1);
+    }
+    to {
+        transform: scale3d(1.02,1.02,1);
+    }
+}
+
+@keyframes hoverCardsArrow {
     from {
         will-change: transform;
         transform: translate3d(48px, 48px, 0px);
     }
     to {
         transform: translate3d(1px, 1px, 0px);
-    }
-}
-
-@keyframes addCards {
-    from {
-        will-change: transform, opacity;
-        transform: scale3d(0.85, 0.85, 0);
-        opacity: 0;
-    }
-    to {
-        transform: scale3d(1, 1, 0);
-        opacity: 1;
     }
 }
