@@ -42,6 +42,15 @@ body {
     opacity: 1;
   }
 }
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+    opacity: 1;
+  }
+}
 @keyframes animateBorder {
   0% {
     transform: rotate(0deg);
@@ -133,7 +142,6 @@ body {
   column-gap: 100px;
   scroll-snap-align: start;
   grid-template-columns: 740px 1fr;
-  /* Animation */
 }
 .main__bg {
   z-index: -1;
@@ -239,16 +247,7 @@ body {
   white-space: nowrap;
 }
 .main .anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 24em;
-    opacity: 1;
-  }
+  animation: typewriter 4s steps(44) 1s 1 normal both;
 }
 .main__descr {
   font-weight: 400;

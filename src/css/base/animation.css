@@ -22,6 +22,15 @@
     opacity: 1;
   }
 }
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+    opacity: 1;
+  }
+}
 @keyframes animateBorder {
   0% {
     transform: rotate(0deg);
