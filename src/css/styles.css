@@ -133,6 +133,7 @@ body {
   column-gap: 100px;
   scroll-snap-align: start;
   grid-template-columns: 740px 1fr;
+  /* Animation */
 }
 .main__bg {
   z-index: -1;
@@ -227,11 +228,27 @@ body {
   white-space: nowrap;
 }
 .main__dev {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
   margin-bottom: 35px;
   font-weight: 700;
   font-size: 24px;
   color: #5221E6;
   white-space: nowrap;
+}
+.main .anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+    opacity: 1;
+  }
 }
 .main__descr {
   font-weight: 400;
