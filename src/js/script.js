@@ -42,7 +42,7 @@ $('.slider').slick({
     slidesToShow: 7,
     slidesToScroll: 7,
     prevArrow: '<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
-    nextArrow: ' <div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>'
+    nextArrow: '<div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>'
 });
 
 

@@ -521,6 +521,9 @@ body {
   display: block;
 }
 
+.slick-arrow {
+  cursor: pointer;
+}
 .slick-arrow img {
   width: 20px;
   height: 25px;
