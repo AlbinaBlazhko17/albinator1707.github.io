@@ -125,6 +125,28 @@ const scrollEvent = () => {
       el.classList.remove('active');
     });
   }
+  const diplomasElements = [...document.querySelectorAll('.diplomas-item')];
+  let cur = 0,
+    delay = 0.5;
+  if (main.scrollTop > 900 && main.scrollTop < 1500) {
+    diplomasElements.forEach((el, i) => {
+      if (i === 0) {
+        el.style.setProperty('animation-delay', 0 + 's');
+        el.style.setProperty('display', 'block');
+        el.classList.add('active');
+      } else {
+        el.style.setProperty('animation-delay', cur + delay + 's');
+        cur += delay;
+        el.style.setProperty('display', 'block');
+        el.classList.add('active');
+      }
+    });
+  } else {
+    diplomasElements.forEach(el => {
+      el.style.setProperty('display', 'none');
+      el.classList.remove('active');
+    });
+  }
 };
 main.addEventListener('scroll', scrollEvent);
 $('.slider').slick({

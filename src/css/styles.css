@@ -59,6 +59,23 @@ body {
     transform: rotate(360deg);
   }
 }
+@keyframes animateLeftToRightText {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    will-change: transform;
+    transform: translate3d(-200px, 0px, 0px);
+    transform-style: preserve-3d;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.9;
+    transform: translate3d(0px, 0px, 0px);
+    transform-style: preserve-3d;
+    opacity: 1;
+  }
+}
 @keyframes rotateBubbles {
   0% {
     transform: rotate(0deg) translate(-165px) rotate(0deg);
@@ -381,6 +398,10 @@ body {
   align-items: center;
   margin-top: 100px;
 }
+.diplomas-item {
+  opacity: 0;
+  visibility: hidden;
+}
 .diplomas-item__number {
   font-weight: 400;
   font-size: 117px;
@@ -402,6 +423,11 @@ body {
 }
 .diplomas-item__descr {
   font-size: 18px;
+}
+
+.active {
+  animation: animateLeftToRightText 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .title {

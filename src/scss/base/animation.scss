@@ -25,8 +25,13 @@
 }
 
 @keyframes typewriter {
-    from{width: 0;}
-    to{width: 24em; opacity: 1;}
+    from{ 
+        width: 0;
+    }
+    to{ 
+        width: 24em;
+        opacity: 1;
+    }
 }
 
  
@@ -39,15 +44,33 @@
     }
 }
 
+@keyframes animateLeftToRightText {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        will-change: transform;
+        transform: translate3d(-200px, 0px, 0px);
+        transform-style: preserve-3d;
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 0.9;
+        transform: translate3d(0px, 0px, 0px);
+        transform-style: preserve-3d;
+        opacity: 1;
+      }
+}
+
+
 @keyframes rotateBubbles {
     0%{
-        transform:rotate(0deg)
+        transform: rotate(0deg)
                   translate(-165px)
                   rotate(0deg);
-      
       }
     100%{
-    transform:rotate(360deg)
+    transform: rotate(360deg)
                 translate(-165px)
                 rotate(-360deg);
     }

@@ -43,6 +43,8 @@
     }
 
     &-item {
+        opacity: 0;
+        visibility: hidden;
         &__number {
             font-weight: 400;
             font-size: 117px;
@@ -68,4 +70,9 @@
             font-size: 18px;
         }
     }
+}
+
+.active {
+    animation: animateLeftToRightText 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
