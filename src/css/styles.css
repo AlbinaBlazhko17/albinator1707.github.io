@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
 body {
-  background-color: #000;
+  background-color: #090323;
 }
 
 * {
@@ -541,7 +541,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
-  border: 1px solid #181823;
+  border: 1px solid #979798;
 }
 .slider-item img {
   display: block;
@@ -556,7 +556,7 @@ body {
 }
 .slick-active:nth-child(7n) {
   width: 2.82% !important;
-  border-right: 2px solid #181823;
+  border-right: 2px solid #979798;
 }
 
 .projects {
