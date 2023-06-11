@@ -4,8 +4,8 @@
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 250px;
-    // scroll-snap-align: start;
-    // scroll-snap-align: center;
+    scroll-snap-align: start;
+    scroll-snap-align: center;
     &::after {
         @include dipomasBorder;
         background-image: conic-gradient(transparent, transparent, transparent, #FB37FF);
