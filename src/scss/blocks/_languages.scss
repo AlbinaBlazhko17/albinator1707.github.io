@@ -1,9 +1,11 @@
+$color: #12c2e9, #c471ed, #f64f59;
+
 .languages {
 	padding: 40px 70px;
 	&__list {
         display: grid;
 		grid-template-columns: 500px 500px 500px;
-		gap: 300px;
+		gap: 270px;
 		list-style-type: none;
 		margin-top: 60px;
         li {
@@ -11,6 +13,15 @@
 			&:last-child {
 				margin-right: 0;
 			}
+			&::before {
+				content: "•";
+				margin-right: 10px;
+				background-image: linear-gradient($color);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				border-radius: 50%;
+			}
         }
+		
     }
 }

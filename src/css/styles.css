@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
 body {
   background-color: #090323;
@@ -526,7 +527,7 @@ body {
 .languages__list {
   display: grid;
   grid-template-columns: 500px 500px 500px;
-  gap: 300px;
+  gap: 270px;
   list-style-type: none;
   margin-top: 60px;
 }
@@ -535,6 +536,14 @@ body {
 }
 .languages__list li:last-child {
   margin-right: 0;
+}
+.languages__list li::before {
+  content: "•";
+  margin-right: 10px;
+  background-image: linear-gradient(#12c2e9, #c471ed, #f64f59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 50%;
 }
 
 .slider {
