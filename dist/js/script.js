@@ -84,13 +84,17 @@ const expandBlockEvent = () => {
   projectsList.forEach((el) => {
     if (el.className.includes('expand')) {
       if (el.style.display === 'inline-block') {
-        el.style.display = 'none';
+        el.style.opacity = '0';
         el.style.animation = 'expandBlocksClose 0.5s';
         buttonProjects.lastElementChild.innerHTML =
           'VIEW&nbsp;ALL&nbsp;PROJECTS';
+        window.setTimeout(() => {
+          el.style.display = 'none';
+        }, 200);
       } else {
         el.style.display = 'inline-block';
         el.style.animation = 'expandBlocks 0.5s';
+        el.style.opacity = '1';
         buttonProjects.lastElementChild.innerHTML =
           'HIDE&nbsp;ALL&nbsp;PROJECTS';
       }
