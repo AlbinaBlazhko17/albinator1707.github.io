@@ -15,7 +15,7 @@ body {
     position: relative;
     max-height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 }
 
 @import 'base/mixins';

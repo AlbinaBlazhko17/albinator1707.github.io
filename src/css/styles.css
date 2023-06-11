@@ -16,7 +16,7 @@ body {
   position: relative;
   max-height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 @keyframes slideInFromLeft {
@@ -740,7 +740,7 @@ body {
 .footer {
   padding: 50px;
   width: calc(100% - 140px);
-  height: 100px;
+  height: 80px;
   background: #181823;
 }
 .footer__logo {
