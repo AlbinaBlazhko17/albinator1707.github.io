@@ -18,21 +18,16 @@
         overflow: hidden;
         display: inline-block;
         margin-bottom: 40px;
-
-        // &_animation {
-        //     animation: hoverCards 0.5s forwards;
-        // }
-
+        transform: scale3d(1, 1, 1);
         &:hover {
-            animation: hoverCards 0.5s forwards;
-            // will-change: transform;
-            // transition: transform 0.4s;
-            // transform: scale3d(1.02,1.02,1);
+            transition: transform 0.2s ease-out;
+            transform: scale3d(1.02, 1.02, 1);
         }
 
         &:hover .projects__link {
             display: flex;
-            animation: hoverCardsArrow 0.5s forwards;
+            transition: transform 0.2s ease-out;
+            transform: translate3d(1px, 1px, 0px);
         }
     }
 
@@ -92,7 +87,6 @@
         justify-content: center;
         align-items: center;
         height: 232px;
-
     }
 
     &__view {
@@ -108,4 +102,9 @@
             background: rgba(82, 33, 230, 1);
         }
     }
+}
+
+.expand {
+    display: none;
+    // opacity: 0;
 }

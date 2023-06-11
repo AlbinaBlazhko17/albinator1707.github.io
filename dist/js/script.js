@@ -1,133 +1,49 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/script.js");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "./src/js/script.js":
-/*!**************************!*\
-  !*** ./src/js/script.js ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-window.addEventListener('DOMContentLoaded', AOS.init);
-window.addEventListener('load', AOS.refresh);
 const main = document.querySelector('.wrapper'),
   percent = document.querySelectorAll('.skills__percent'),
   listOfCircles = [...document.querySelectorAll('.circle')];
 let timer = [],
   counter = 0;
+
 const setPerc = (value, i) => {
   const arr = [...percent];
   counter++;
   arr[i].textContent = `${counter}%`;
   if (counter == value) clearInterval(timer[i]);
 };
+
 const scrollEvent = () => {
-  const dash = listOfCircles.map(el => {
+  const dash = listOfCircles.map((el) => {
     const style = getComputedStyle(el);
     return style.strokeDashoffset;
   });
+
   if (main.scrollTop > 1600) {
     listOfCircles.forEach((el, i) => {
       el.style.setProperty('--stroke-dashoffset', dash[i]);
       el.classList.add('active');
       if (!timer[i]) {
-        timer[i] = setInterval(() => setPerc(document.querySelectorAll('.skills__percent')[i].getAttribute('data-value'), i), 100);
+        timer[i] = setInterval(
+          () =>
+            setPerc(
+              document
+                .querySelectorAll('.skills__percent')
+                [i].getAttribute('data-value'),
+              i
+            ),
+          100
+        );
       }
-      ;
     });
   } else {
-    listOfCircles.forEach(el => {
+    listOfCircles.forEach((el) => {
       el.classList.remove('active');
     });
   }
   const diplomasElements = [...document.querySelectorAll('.diplomas-item')];
+
   let cur = 0,
     delay = 0.5;
+
   if (main.scrollTop > 900 && main.scrollTop < 1500) {
     diplomasElements.forEach((el, i) => {
       if (i === 0) {
@@ -142,22 +58,44 @@ const scrollEvent = () => {
       }
     });
   } else {
-    diplomasElements.forEach(el => {
+    diplomasElements.forEach((el) => {
       el.style.setProperty('display', 'none');
       el.classList.remove('active');
     });
   }
 };
+
 main.addEventListener('scroll', scrollEvent);
+
 $('.slider').slick({
   infinite: true,
   slidesToShow: 7,
   slidesToScroll: 7,
-  prevArrow: '<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
-  nextArrow: '<div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>'
+  prevArrow:
+    '<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
+  nextArrow:
+    '<div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>',
 });
 
-/***/ })
+const buttonProjects = document.querySelector('.projects__button');
+const projectsList = [...document.querySelectorAll('.projects-item')];
 
-/******/ });
-//# sourceMappingURL=script.js.map
+const expandBlockEvent = () => {
+  projectsList.forEach((el) => {
+    if (el.className.includes('expand')) {
+      if (el.style.display === 'inline-block') {
+        el.style.display = 'none';
+        el.style.animation = 'expandBlocksClose 0.5s';
+        buttonProjects.lastElementChild.innerHTML =
+          'VIEW&nbsp;ALL&nbsp;PROJECTS';
+      } else {
+        el.style.display = 'inline-block';
+        el.style.animation = 'expandBlocks 0.5s';
+        buttonProjects.lastElementChild.innerHTML =
+          'HIDE&nbsp;ALL&nbsp;PROJECTS';
+      }
+    }
+  });
+};
+
+buttonProjects.addEventListener('click', expandBlockEvent);

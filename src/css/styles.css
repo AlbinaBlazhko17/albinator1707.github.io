@@ -92,22 +92,20 @@ body {
     stroke-dasharray: 900 900;
   }
 }
-@keyframes hoverCards {
+@keyframes expandBlocks {
   from {
-    will-change: transform;
-    transform: scale3d(1, 1, 1);
+    opacity: 0;
   }
   to {
-    transform: scale3d(1.02, 1.02, 1);
+    opacity: 1;
   }
 }
-@keyframes hoverCardsArrow {
+@keyframes expandBlocksClose {
   from {
-    will-change: transform;
-    transform: translate3d(48px, 48px, 0px);
+    opacity: 1;
   }
   to {
-    transform: translate3d(1px, 1px, 0px);
+    opacity: 0;
   }
 }
 .header {
@@ -579,13 +577,16 @@ body {
   overflow: hidden;
   display: inline-block;
   margin-bottom: 40px;
+  transform: scale3d(1, 1, 1);
 }
 .projects-item:hover {
-  animation: hoverCards 0.5s forwards;
+  transition: transform 0.2s ease-out;
+  transform: scale3d(1.02, 1.02, 1);
 }
 .projects-item:hover .projects__link {
   display: flex;
-  animation: hoverCardsArrow 0.5s forwards;
+  transition: transform 0.2s ease-out;
+  transform: translate3d(1px, 1px, 0px);
 }
 .projects__descr {
   position: relative;
@@ -646,6 +647,10 @@ body {
   box-shadow: 0 20px 60px 0 rgba(82, 33, 230, 0.3);
   transform: translate(0px, -5px);
   background: rgb(82, 33, 230);
+}
+
+.expand {
+  display: none;
 }
 
 .business {
