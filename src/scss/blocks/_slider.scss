@@ -3,9 +3,10 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 70px;
     padding: 0 200px;
     gap: 50px;
+    margin-bottom: 50px;
     &-item {
         box-sizing: border-box;
         display: flex !important;
@@ -15,6 +16,8 @@
         border: 1px solid #979798;
         img {
             display: block;
+            width: 70px;
+            height: 70px;
         }
     }
 }

@@ -4,7 +4,7 @@
     height: 100vh;
     display: grid;
     column-gap: 100px;
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     grid-template-columns: 740px 1fr;
     &__bg {
         z-index: -1;
