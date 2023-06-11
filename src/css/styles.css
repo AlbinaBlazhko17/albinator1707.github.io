@@ -738,9 +738,9 @@ body {
 }
 
 .footer {
-  padding: 70px;
+  padding: 50px;
   width: calc(100% - 140px);
-  height: 250px;
+  height: 100px;
   background: #181823;
 }
 .footer__logo {
@@ -752,14 +752,12 @@ body {
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   background-clip: text;
-  background-clip: text;
 }
 .footer__links {
   width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10%;
 }
 .footer__links a {
   display: block;
