@@ -1,7 +1,8 @@
 const main = document.querySelector(".wrapper"),
 	percent = document.querySelectorAll(".skills__percent"),
 	listOfCircles = [...document.querySelectorAll(".circle")],
-	pageUpButton = document.querySelector(".pageup");
+	pageUpLink = document.querySelector(".pageup");
+pageUpButton = document.querySelector(".buttonup");
 let timer = [],
 	counter = 0;
 
@@ -10,12 +11,6 @@ const setPerc = (value, i) => {
 	counter++;
 	arr[i].textContent = `${counter}%`;
 	if (counter == value) clearInterval(timer[i]);
-};
-
-const pageUpButtonOpacity = () => {
-	let currScrollPos =
-		window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-	pageUpButton.style.opacity = -currScrollPos / 1600 + 2;
 };
 
 const addLeftToRightAnimation = (items, min, max) => {
@@ -67,12 +62,13 @@ const scrollEvent = () => {
 				);
 			}
 		});
-		pageUpButton.style.opacity = -2200 / currScrollPos + 2;
-		console.log(-2200 / (currScrollPos - 300) + 2);
+		pageUpLink.style.display = "block";
+		pageUpLink.style.opacity = -2200 / currScrollPos + 2;
 	} else {
 		listOfCircles.forEach((el) => {
 			el.classList.remove("active");
-			pageUpButton.style.opacity = 0;
+			pageUpLink.style.opacity = 0;
+			pageUpLink.style.display = "none";
 		});
 	}
 
