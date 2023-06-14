@@ -18,6 +18,23 @@ body {
     scroll-snap-type: y proximity;
 }
 
+.pageup {
+    display: block;
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    svg {
+        bottom: 60px;
+        right: 18px;
+        position: fixed;
+        z-index: 999;
+        filter: drop-shadow(4px 4px 4px rgba(109, 109, 109, 0.4));
+    }
+    path {
+        fill: url(#gradient);
+    }
+}
+
 @import 'base/mixins';
 @import 'base/animations';
 @import 'blocks/header';
