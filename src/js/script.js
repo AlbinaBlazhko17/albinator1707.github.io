@@ -11,6 +11,30 @@ const setPerc = (value, i) => {
   if (counter == value) clearInterval(timer[i]);
 };
 
+const addLeftToRightAnimation = (items, min, max) => {
+  let cur = 0,
+    delay = 0.5;
+  if (main.scrollTop > min && main.scrollTop < max) {
+    items.forEach((el, i) => {
+      if (i === 0) {
+        el.style.setProperty('animation-delay', 0 + 's');
+        el.style.setProperty('display', 'block');
+        el.classList.add('active');
+      } else {
+        el.style.setProperty('animation-delay', cur + delay + 's');
+        cur += delay;
+        el.style.setProperty('display', 'block');
+        el.classList.add('active');
+      }
+    });
+  } else {
+    items.forEach((el) => {
+      el.style.setProperty('display', 'none');
+      el.classList.remove('active');
+    });
+  }
+};
+
 const scrollEvent = () => {
   const dash = listOfCircles.map((el) => {
     const style = getComputedStyle(el);
@@ -40,29 +64,10 @@ const scrollEvent = () => {
     });
   }
   const diplomasElements = [...document.querySelectorAll('.diplomas-item')];
+  addLeftToRightAnimation(diplomasElements, 900, 1500);
 
-  let cur = 0,
-    delay = 0.5;
-
-  if (main.scrollTop > 900 && main.scrollTop < 1500) {
-    diplomasElements.forEach((el, i) => {
-      if (i === 0) {
-        el.style.setProperty('animation-delay', 0 + 's');
-        el.style.setProperty('display', 'block');
-        el.classList.add('active');
-      } else {
-        el.style.setProperty('animation-delay', cur + delay + 's');
-        cur += delay;
-        el.style.setProperty('display', 'block');
-        el.classList.add('active');
-      }
-    });
-  } else {
-    diplomasElements.forEach((el) => {
-      el.style.setProperty('display', 'none');
-      el.classList.remove('active');
-    });
-  }
+  const languageElements = [...document.querySelectorAll('.languages-item')];
+  addLeftToRightAnimation(languageElements, 1700, 3000);
 };
 
 main.addEventListener('scroll', scrollEvent);

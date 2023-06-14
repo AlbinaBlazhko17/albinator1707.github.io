@@ -536,6 +536,9 @@ body {
   margin-top: 60px;
 }
 .languages__list li {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
   font-size: 40px;
 }
 .languages__list li:last-child {
@@ -548,6 +551,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-radius: 50%;
+}
+.languages__list .active {
+  animation: animateLeftToRightText 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .slider {
