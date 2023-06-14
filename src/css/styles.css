@@ -719,6 +719,7 @@ body {
   border: none;
   background: #181823;
   margin-top: 8px;
+  resize: none;
 }
 .business .subtitle {
   text-transform: none;
