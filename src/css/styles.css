@@ -795,6 +795,7 @@ body {
 }
 
 .footer {
+  box-sizing: border-box;
   position: relative;
   padding: 50px;
   width: 100%;
