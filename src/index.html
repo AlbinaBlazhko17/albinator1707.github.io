@@ -544,7 +544,7 @@
                 <div class="diplomas-item">
                     <div class="diplomas-item__number">02</div>
                     <div class="diplomas-item__title diplomas-item__title_violet">Courses</div>
-                    <div class="diplomas-item__descr">During my studies at the university and after <br> graduation i took various <span class="diplomas__courses">courses</span> and recieved <br> a big amount of certificates.</div>
+                    <div class="diplomas-item__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of <span class="diplomas__certificates">certificates</span>.</div>
                 </div>
 
                 <div class="diplomas-item">
@@ -556,6 +556,11 @@
         </div>
     </div>
     <div class="certificates">
+        <div class="certificates__bg">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="certificates__slider">
             <div class="certificates__slider-item">
                 <img src="./img/certificate_CPP.jpg" alt="c++">
@@ -581,68 +586,105 @@
             <div class="certificates__slider-item">
                 <img src="./img/certificate_nest.jpg" alt="nest">
             </div>
-            <!-- <div class="certificates__slider-item">
-                <img src="./img/proj4.jpeg" alt="nest">
-            </div> -->
         </div>
     </div>
     <div class="skills" id="skillset">
-        <div class="title title_center">Skillset</div>
-        <hr class="skills__hr">
-        <div class="subtitle subtitle_center">Hard skills</div>
-        <div class="skills__wrapper">
-            <div class="skills-item">
-                <div class="skills__circle">
-                    <div class="skills__percent" data-value="75">75%</div>
-                    <svg width="250px" height="250px" viewBox="0 0 400 400" version="1.1">
-                            <defs>
-                                <filter id="glowPink" x="0" y="0" width="500" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset/>
-                                    <feGaussianBlur stdDeviation="15"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0.8625 0 0 0 0 0.330625 0 0 0 0 0.713575 0 0 0 1 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2700_20"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2700_20" result="shape"/>
-                                </filter>
-    
-                                <mask id="circle-mask">
-                                    <circle cx="200" cy="195" r="145" fill="white"/>
-                                    <circle cx="200" cy="195" r="130" fill="black"/>
-                                </mask>
-                                
-                                <linearGradient id="progressPink" x1="370.5398" y1="470.4667" x2="470.708" y2="150.387" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#6518B4"/>
-                                    <stop offset="1" stop-color="#D24074"/>
-                                </linearGradient>
-                            </defs>
-                            <g filter="url(#glowPink)">
-                                <circle r="145" cx="200" cy="195" mask="url(#circle-mask)" fill="#DC54B6" fill-opacity="0.15"></circle>
-                            </g>
-                            <g>
-                                <circle cx="200" cy="195" r="145" 
-                                mask="url(#circle-mask)" id="first" class="circle" > 
-                                </circle>
-                            </g>
-                    </svg>
+        <!-- <div class="skills__wrapper"> -->
+            <div class="title title_center">Skillset</div>
+            <hr class="skills__hr">
+            <div class="subtitle subtitle_center">Hard skills</div>
+            <div class="skills__hard">
+                <div class="skills-item">
+                    <div class="skills__circle">
+                        <div class="skills__percent" data-value="75">75%</div>
+                        <svg width="250px" height="250px" viewBox="0 0 400 400" version="1.1">
+                                <defs>
+                                    <filter id="glowPink" x="0" y="0" width="500" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset/>
+                                        <feGaussianBlur stdDeviation="15"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0.8625 0 0 0 0 0.330625 0 0 0 0 0.713575 0 0 0 1 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2700_20"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2700_20" result="shape"/>
+                                    </filter>
+        
+                                    <mask id="circle-mask">
+                                        <circle cx="200" cy="195" r="145" fill="white"/>
+                                        <circle cx="200" cy="195" r="130" fill="black"/>
+                                    </mask>
+                                    
+                                    <linearGradient id="progressPink" x1="370.5398" y1="470.4667" x2="470.708" y2="150.387" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#6518B4"/>
+                                        <stop offset="1" stop-color="#D24074"/>
+                                    </linearGradient>
+                                </defs>
+                                <g filter="url(#glowPink)">
+                                    <circle r="145" cx="200" cy="195" mask="url(#circle-mask)" fill="#DC54B6" fill-opacity="0.15"></circle>
+                                </g>
+                                <g>
+                                    <circle cx="200" cy="195" r="145" 
+                                    mask="url(#circle-mask)" id="first" class="circle" > 
+                                    </circle>
+                                </g>
+                        </svg>
+                    </div>
+                    <div class="skills__subtitle">Front-end development</div>
+                    <div class="skills__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of certificates.</div>
                 </div>
-                <div class="skills__subtitle">Front-end development</div>
-                <div class="skills__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of certificates.</div>
-            </div>
-
-            <div class="skills-item">
-                <div class="skills__circle">
-                    <div class="skills__percent" data-value="50">50%</div>
+    
+                <div class="skills-item">
+                    <div class="skills__circle">
+                        <div class="skills__percent" data-value="50">50%</div>
+                            <svg width="250px" height="250px" viewBox="0 0 400 400" version="1.1"> 
+                                <defs>
+                                    <filter id="glowYellow" x="0" y="0" width="500" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset/>
+                                        <feGaussianBlur stdDeviation="15"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0.704167 0 0 0 0 0.64754 0 0 0 0 0.137899 0 0 0 1 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2701_139"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2701_139" result="shape"/>
+                                    </filter>
+        
+                                    <mask id="circle-mask">
+                                        <circle cx="200" cy="195" r="145" fill="white"/>
+                                        <circle cx="200" cy="195" r="130" fill="black"/>
+                                    </mask>
+                                    
+                                    <linearGradient id="progressYellow" x1="250.5398" y1="250.4667" x2="100.7082" y2="190.387" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FF8D01"/>
+                                        <stop offset="1" stop-color="#FFF95B"/>
+                                        </linearGradient>
+                                </defs>
+                                <g filter="url(#glowYellow)">
+                                    <circle r="145" cx="200" cy="195" mask="url(#circle-mask)" fill="#DC54B6" fill-opacity="0.15"></circle>
+                                </g>
+                                <g>
+                                    <circle cx="200" cy="195" r="145" 
+                                    mask="url(#circle-mask)" id="second" class="circle" > 
+                                    </circle>
+                                </g>
+                        </svg>
+                    </div>
+                    <div class="skills__subtitle">Back-end development</div>
+                    <div class="skills__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of certificates.</div>
+                </div>
+    
+                <div class="skills-item">
+                    <div class="skills__circle">
+                        <div class="skills__percent" data-value="65">65%</div>
                         <svg width="250px" height="250px" viewBox="0 0 400 400" version="1.1"> 
                             <defs>
-                                <filter id="glowYellow" x="0" y="0" width="500" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <filter id="glowGreen" x="0" y="0" width="500" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                                     <feOffset/>
                                     <feGaussianBlur stdDeviation="15"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0.704167 0 0 0 0 0.64754 0 0 0 0 0.137899 0 0 0 1 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2701_139"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2701_139" result="shape"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.58425 0 0 0 0 0.95 0 0 0 0 0.296875 0 0 0 1 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2701_148"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2701_148" result="shape"/>
                                 </filter>
     
                                 <mask id="circle-mask">
@@ -650,119 +692,81 @@
                                     <circle cx="200" cy="195" r="130" fill="black"/>
                                 </mask>
                                 
-                                <linearGradient id="progressYellow" x1="250.5398" y1="250.4667" x2="100.7082" y2="190.387" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FF8D01"/>
-                                    <stop offset="1" stop-color="#FFF95B"/>
-                                    </linearGradient>
+                                <linearGradient id="progressGreen" x1="420.5398" y1="500.4667" x2="434.708" y2="130.387" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#AEFB2A "/>
+                                    <stop offset="1" stop-color="#57EBDE"/>
+                                </linearGradient>
                             </defs>
-                            <g filter="url(#glowYellow)">
+                            <g filter="url(#glowGreen)">
                                 <circle r="145" cx="200" cy="195" mask="url(#circle-mask)" fill="#DC54B6" fill-opacity="0.15"></circle>
                             </g>
                             <g>
                                 <circle cx="200" cy="195" r="145" 
-                                mask="url(#circle-mask)" id="second" class="circle" > 
+                                mask="url(#circle-mask)" id="third" class="circle" > 
                                 </circle>
                             </g>
                     </svg>
+                    </div>
+                    <div class="skills__subtitle">C++ development</div>
+                    <div class="skills__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of certificates.</div>
                 </div>
-                <div class="skills__subtitle">Back-end development</div>
-                <div class="skills__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of certificates.</div>
+                
             </div>
-
-            <div class="skills-item">
-                <div class="skills__circle">
-                    <div class="skills__percent" data-value="65">65%</div>
-                    <svg width="250px" height="250px" viewBox="0 0 400 400" version="1.1"> 
-                        <defs>
-                            <filter id="glowGreen" x="0" y="0" width="500" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                <feOffset/>
-                                <feGaussianBlur stdDeviation="15"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0.58425 0 0 0 0 0.95 0 0 0 0 0.296875 0 0 0 1 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2701_148"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2701_148" result="shape"/>
-                            </filter>
-
-                            <mask id="circle-mask">
-                                <circle cx="200" cy="195" r="145" fill="white"/>
-                                <circle cx="200" cy="195" r="130" fill="black"/>
-                            </mask>
-                            
-                            <linearGradient id="progressGreen" x1="420.5398" y1="500.4667" x2="434.708" y2="130.387" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#AEFB2A "/>
-                                <stop offset="1" stop-color="#57EBDE"/>
-                            </linearGradient>
-                        </defs>
-                        <g filter="url(#glowGreen)">
-                            <circle r="145" cx="200" cy="195" mask="url(#circle-mask)" fill="#DC54B6" fill-opacity="0.15"></circle>
-                        </g>
-                        <g>
-                            <circle cx="200" cy="195" r="145" 
-                            mask="url(#circle-mask)" id="third" class="circle" > 
-                            </circle>
-                        </g>
-                </svg>
-                </div>
-                <div class="skills__subtitle">C++ development</div>
-                <div class="skills__descr">During my studies at the university and after <br> graduation i took various courses and recieved <br> a big amount of certificates.</div>
+            <div class="slider">
+                    <div class="slider-item border-left">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html5" />
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css" />
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass" />
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" width="70" height="70"/>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="js" width="70" height="70"/>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="ts"/>
+                    </div>
+                    <div class="slider-item border-right">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react"/>
+                    </div>
+                    <div class="slider-item border-left">
+                        <img src="icons/next-js-icon-seeklogo.com 1.png" alt="next">
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs"/>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="nestjs"/>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="mongodb"/>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python"/>
+                    </div>
+                    <div class="slider-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" alt="cpp"/>
+                    </div>
+                    <div class="slider-item border-right">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git"/>
+                    </div>
             </div>
-            
-        </div>
-        <div class="slider">
-                <div class="slider-item border-left">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html5" />
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css" />
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass" />
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" width="70" height="70"/>
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="js" width="70" height="70"/>
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="ts"/>
-                </div>
-                <div class="slider-item border-right">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react"/>
-                </div>
-                <div class="slider-item border-left">
-                    <img src="icons/next-js-icon-seeklogo.com 1.png" alt="next">
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs"/>
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="nestjs"/>
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="mongodb"/>
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python"/>
-                </div>
-                <div class="slider-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" alt="cpp"/>
-                </div>
-                <div class="slider-item border-right">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git"/>
-                </div>
-        </div>
-        <div class="languages">
-            <div class="title title_center">Languages</div>
-            <hr class="skills__hr">
-            <div class="subtitle subtitle_center">Soft skills</div>
-            <ul class="languages__list">
-                <li class="languages-item">Ukrainian - Native</li>
-                <li class="languages-item">English - Intermediate</li>
-                <li class="languages-item">Romanian - Beginner</li>
-            </ul>
-        </div>
+            <div class="languages">
+                <div class="title title_center">Languages</div>
+                <hr class="skills__hr">
+                <div class="subtitle subtitle_center">Soft skills</div>
+                <ul class="languages__list">
+                    <li class="languages-item">Ukrainian - Native</li>
+                    <li class="languages-item">English - Intermediate</li>
+                    <li class="languages-item">Romanian - Beginner</li>
+                </ul>
+            </div>
+        <!-- </div> -->
     </div>
     <div class="projects" id="works">
         <div class="projects__wrapper">

@@ -1,4 +1,5 @@
 .certificates {
+	display: none;
 	scroll-snap-align: start;
     scroll-snap-align: center;
 	margin-bottom: 100px;
@@ -19,4 +20,43 @@
 			}
 		}
 	}
+	&__bg {
+        z-index: -1;
+        :nth-child(1) {
+            position: absolute;
+			top: 194%;
+			right: 2%;
+			width: 1417px;
+			height: 377px;
+            background: #FE3CB9;
+            filter: blur(150px);
+            transform: matrix(0.87, 0.54, -0.47, 0.86, 0, 0);
+            animation: rotateBubblesCertificates 20s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+            transition: all 0.1s ease-out;
+        }
+        :nth-child(2) {
+            position: absolute;
+			right: 8.12%;
+			top: 229.63%;
+			width: 1796.78px;
+			height: 551.72px;
+            background: #793AFF;
+            filter: blur(150px);
+            transform: matrix(0.97, -0.22, 0.22, 0.98, 0, 0);
+            animation: rotateBubblesCertificates 20s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+            transition: all 0.1s ease-out;
+        }
+        :nth-child(3) {
+            position: absolute;
+			right: 58.82%;
+			top: 198.52%;
+			width: 768.13px;
+			height: 632.51px;
+            background: #69FFFF;
+            filter: blur(150px);
+            transform: matrix(0.8, -0.62, 0.6, 0.79, 0, 0);
+            animation: rotateBubblesCertificates 20s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+            transition: all 0.1s ease-out;
+        }
+    }
 }

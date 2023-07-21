@@ -76,6 +76,19 @@
     }
 }
 
+@keyframes rotateBubblesCertificates {
+    0%{
+        transform: rotate(0deg)
+                  translate(-100px)
+                  rotate(0deg);
+      }
+    100%{
+    transform: rotate(360deg)
+                translate(-100px)
+                rotate(-360deg);
+    }
+}
+
 @keyframes progress {
     from {
         stroke-dasharray: var(--stroke-dashoffset) 900;

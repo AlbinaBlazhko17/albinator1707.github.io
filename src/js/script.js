@@ -1,10 +1,26 @@
 const main = document.querySelector(".wrapper"),
 	percent = document.querySelectorAll(".skills__percent"),
 	listOfCircles = [...document.querySelectorAll(".circle")],
-	pageUpLink = document.querySelector(".pageup");
-pageUpButton = document.querySelector(".buttonup");
+	pageUpLink = document.querySelector(".pageup"),
+	pageUpButton = document.querySelector(".buttonup"),
+	certificatesButton = document.querySelector(".diplomas__certificates"),
+	certificatesSlider = document.querySelector(".certificates");
 let timer = [],
 	counter = 0;
+
+$(".certificates__slider").slick({
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	initialSlide: 1,
+	centerMode: true,
+	variableWidth: true,
+	slide: ".certificates__slider-item",
+	prevArrow:
+		'<div class="certificates__slider-arrow"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
+	nextArrow:
+		'<div class="certificates__slider-arrow"><img src="icons/arrow_right.png" alt="arrow_right"></div>',
+});
 
 const setPerc = (value, i) => {
 	const arr = [...percent];
@@ -36,6 +52,16 @@ const addLeftToRightAnimation = (items, min, max) => {
 		});
 	}
 };
+
+certificatesButton.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	certificatesSlider.style.display = "block";
+	$(".certificates__slider").slick("refresh");
+	certificatesSlider.scrollIntoView({
+		behavior: "smooth",
+	});
+});
 
 const scrollEvent = () => {
 	const dash = listOfCircles.map((el) => {
@@ -89,19 +115,6 @@ $(".slider").slick({
 		'<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
 	nextArrow:
 		'<div class="slider__arrow_right"><img src="icons/arrow_right.png" alt="arrow_right"></div>',
-});
-
-$(".certificates__slider").slick({
-	infinite: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	centerMode: true,
-	variableWidth: true,
-	slide: ".certificates__slider-item",
-	prevArrow:
-		'<div class="certificates__slider-arrow"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
-	nextArrow:
-		'<div class="certificates__slider-arrow"><img src="icons/arrow_right.png" alt="arrow_right"></div>',
 });
 
 const buttonProjects = document.querySelector(".projects__button");
