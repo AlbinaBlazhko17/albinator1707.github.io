@@ -88,7 +88,20 @@ $(".slider").slick({
 	prevArrow:
 		'<div class="slider__arrow_left"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
 	nextArrow:
-		'<div class="slider__arrow_right"> <img src="icons/arrow_right.png" alt="arrow_right"></div>',
+		'<div class="slider__arrow_right"><img src="icons/arrow_right.png" alt="arrow_right"></div>',
+});
+
+$(".certificates__slider").slick({
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	centerMode: true,
+	variableWidth: true,
+	slide: ".certificates__slider-item",
+	prevArrow:
+		'<div class="certificates__slider-arrow"><img src="icons/arrow_left.png" alt="arrow_left"></div>',
+	nextArrow:
+		'<div class="certificates__slider-arrow"><img src="icons/arrow_right.png" alt="arrow_right"></div>',
 });
 
 const buttonProjects = document.querySelector(".projects__button");

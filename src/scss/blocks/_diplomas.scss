@@ -19,7 +19,7 @@
         animation: animateBorder 4s linear infinite;
     }
 
-    span {
+    &__bg {
         position: absolute;
         inset: 5px;
         border-radius: 25px;
@@ -40,6 +40,12 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 100px;
+    }
+
+    &__courses {
+        color: #18B2DE;
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     &-item {

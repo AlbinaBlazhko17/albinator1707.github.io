@@ -394,7 +394,7 @@ body {
   background-image: conic-gradient(transparent, transparent, transparent, #18B2DE);
   animation: animateBorder 4s linear infinite;
 }
-.diplomas span {
+.diplomas__bg {
   position: absolute;
   inset: 5px;
   border-radius: 25px;
@@ -413,6 +413,11 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 100px;
+}
+.diplomas__courses {
+  color: #18B2DE;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .diplomas-item {
   opacity: 0;
@@ -444,6 +449,29 @@ body {
 .active {
   animation: animateLeftToRightText 1s ease-in-out;
   animation-fill-mode: forwards;
+}
+
+.certificates {
+  scroll-snap-align: start;
+  scroll-snap-align: center;
+  margin-bottom: 100px;
+}
+.certificates__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 2000px;
+}
+.certificates__slider-item {
+  text-align: center;
+  padding: 0 200px;
+  height: 1000px;
+}
+.certificates__slider-item img {
+  width: 100%;
+  display: block;
+  height: 100%;
 }
 
 .title {
@@ -597,6 +625,14 @@ body {
   width: 70px;
   height: 70px;
 }
+.slider .border-left {
+  width: 2.95% !important;
+  border-left: 3px solid #979798;
+}
+.slider .border-right {
+  width: 2.83% !important;
+  border-right: 4px solid #979798;
+}
 
 .slick-arrow {
   cursor: pointer;
@@ -604,10 +640,6 @@ body {
 .slick-arrow img {
   width: 20px;
   height: 25px;
-}
-.slick-active:nth-child(7n) {
-  width: 2.82% !important;
-  border-right: 2px solid #979798;
 }
 
 .projects {

@@ -1,0 +1,22 @@
+.certificates {
+	scroll-snap-align: start;
+    scroll-snap-align: center;
+	margin-bottom: 100px;
+	&__slider {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		width: 2000px;
+		&-item {
+			text-align: center;
+			padding: 0 200px;
+			height: 1000px;
+			img {
+				width: 100%;
+				display: block;
+				height: 100%;
+			}
+		}
+	}
+}
