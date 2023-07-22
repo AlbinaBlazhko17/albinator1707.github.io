@@ -3,6 +3,7 @@ const main = document.querySelector(".wrapper"),
 	listOfCircles = [...document.querySelectorAll(".circle")],
 	pageUpLink = document.querySelector(".pageup"),
 	pageUpButton = document.querySelector(".buttonup"),
+	diplomasBlock = document.querySelector(".diplomas"),
 	certificatesButton = document.querySelector(".diplomas__certificates"),
 	certificatesSlider = document.querySelector(".certificates");
 let timer = [],
@@ -50,13 +51,15 @@ const addLeftToRightAnimation = (items, min, max) => {
 };
 
 certificatesButton.addEventListener("click", (e) => {
-	e.preventDefault();
-
-	certificatesSlider.style.display = "block";
-	$(".certificates__slider").slick("refresh");
-	certificatesSlider.scrollIntoView({
-		behavior: "smooth",
-	});
+	if (certificatesSlider.style.display === "" || certificatesSlider.style.display === "none") {
+		certificatesSlider.style.display = "block";
+		$(".certificates__slider").slick("refresh");
+		certificatesSlider.scrollIntoView({
+			behavior: "smooth",
+		});
+	} else if (certificatesSlider.style.display === "block") {
+		certificatesSlider.style.display = "none";
+	}
 });
 
 const circlesAnimation = (height) => {
@@ -109,20 +112,6 @@ const circlesAnimation = (height) => {
 		addLeftToRightAnimation(languageElements, 1600, 3000);
 	}
 };
-
-// const languageElements = [...document.querySelectorAll(".languages-item")];
-
-// main.addEventListener("scroll", (e) => {
-// 	if (certificatesSlider.style.display === "block") {
-// 		addLeftToRightAnimation(
-// 			languageElements,
-// 			1600 + certificatesSlider.offsetHeight,
-// 			3000 + certificatesSlider.offsetHeight
-// 		);
-// 	} else {
-// 		addLeftToRightAnimation(languageElements, 1600, 3000);
-// 	}
-// });
 
 main.addEventListener("scroll", () => {
 	if (certificatesSlider.style.display === "block") {
