@@ -133,18 +133,18 @@ $(".slider").slick({
 
 const buttonProjects = document.querySelector(".projects__button");
 const projectsList = [...document.querySelectorAll(".projects-item")];
-const projectItemFirst = projectsList[0];
+const projectsBlock = document.querySelector(".projects");
 
 const expandBlockEvent = () => {
+	projectsBlock.scrollIntoView({
+		behavior: "smooth",
+	});
 	projectsList.forEach((el) => {
 		if (el.className.includes("expand")) {
 			if (el.style.display === "inline-block") {
 				el.style.opacity = "0";
 				el.style.animation = "expandBlocksClose 0.5s";
 				buttonProjects.lastElementChild.innerHTML = "VIEW&nbsp;ALL&nbsp;PROJECTS";
-				projectItemFirst.scrollIntoView({
-					behavior: "smooth",
-				});
 				window.setTimeout(() => {
 					el.style.display = "none";
 				}, 200);
@@ -166,12 +166,12 @@ buttonProjects.addEventListener("click", (e) => {
 	expandBlockEvent();
 });
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-	anchor.addEventListener("click", function (e) {
-		e.preventDefault();
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+// 	anchor.addEventListener("click", function (e) {
+// 		e.preventDefault();
 
-		document.querySelector(this.getAttribute("href")).scrollIntoView({
-			behavior: "smooth",
-		});
-	});
-});
+// 		document.querySelector(this.getAttribute("href")).scrollIntoView({
+// 			behavior: "smooth",
+// 		});
+// 	});
+// });
