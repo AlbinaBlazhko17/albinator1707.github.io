@@ -14,7 +14,7 @@ body {
     width: 100%;
     position: relative;
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-snap-type: y proximity;
 }
 

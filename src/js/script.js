@@ -63,7 +63,7 @@ certificatesButton.addEventListener("click", (e) => {
 	});
 });
 
-const scrollEvent = () => {
+const circlesAnimation = (height) => {
 	const dash = listOfCircles.map((el) => {
 		const style = getComputedStyle(el);
 		return style.strokeDashoffset;
@@ -71,7 +71,7 @@ const scrollEvent = () => {
 
 	let currScrollPos = main.scrollTop || 0;
 
-	if (main.scrollTop > 1600) {
+	if (main.scrollTop > height) {
 		listOfCircles.forEach((el, i) => {
 			el.style.setProperty("--stroke-dashoffset", dash[i]);
 			el.classList.add("active");
@@ -100,12 +100,29 @@ const scrollEvent = () => {
 
 	const diplomasElements = [...document.querySelectorAll(".diplomas-item")];
 	addLeftToRightAnimation(diplomasElements, 900, 1500);
-
-	const languageElements = [...document.querySelectorAll(".languages-item")];
-	addLeftToRightAnimation(languageElements, 1700, 3000);
 };
 
-main.addEventListener("scroll", scrollEvent);
+const languageElements = [...document.querySelectorAll(".languages-item")];
+
+main.addEventListener("scroll", (e) => {
+	if (certificatesSlider.style.display === "block") {
+		addLeftToRightAnimation(
+			languageElements,
+			1600 + certificatesSlider.offsetHeight,
+			3000 + certificatesSlider.offsetHeight
+		);
+	} else {
+		addLeftToRightAnimation(languageElements, 1600, 3000);
+	}
+});
+
+main.addEventListener("scroll", () => {
+	if (certificatesSlider.style.display === "block") {
+		circlesAnimation(1600 + certificatesSlider.offsetHeight);
+	} else {
+		circlesAnimation(1600);
+	}
+});
 
 $(".slider").slick({
 	infinite: true,
