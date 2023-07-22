@@ -88,6 +88,15 @@
     opacity: 1;
   }
 }
+@keyframes hoverCards {
+  from {
+    will-change: transform;
+    transform: translate3d(48px, 48px, 0px);
+  }
+  to {
+    transform: translate3d(1px, 1px, 0px);
+  }
+}
 @keyframes expandBlocksClose {
   from {
     opacity: 1;
