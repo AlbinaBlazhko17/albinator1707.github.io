@@ -6,7 +6,8 @@ const main = document.querySelector(".wrapper"),
 	certificatesButton = document.querySelector(".diplomas__certificates"),
 	certificatesSlider = document.querySelector(".certificates");
 let timer = [],
-	counter = 0;
+	counter = 0,
+	isAnimated = false;
 
 $(".certificates__slider").slick({
 	infinite: true,
@@ -44,11 +45,6 @@ const addLeftToRightAnimation = (items, min, max) => {
 				el.style.setProperty("display", "block");
 				el.classList.add("active");
 			}
-		});
-	} else {
-		items.forEach((el) => {
-			el.style.setProperty("display", "none");
-			el.classList.remove("active");
 		});
 	}
 };
@@ -100,11 +96,9 @@ const circlesAnimation = (height) => {
 
 	const diplomasElements = [...document.querySelectorAll(".diplomas-item")];
 	addLeftToRightAnimation(diplomasElements, 900, 1500);
-};
 
-const languageElements = [...document.querySelectorAll(".languages-item")];
+	const languageElements = [...document.querySelectorAll(".languages-item")];
 
-main.addEventListener("scroll", (e) => {
 	if (certificatesSlider.style.display === "block") {
 		addLeftToRightAnimation(
 			languageElements,
@@ -114,7 +108,21 @@ main.addEventListener("scroll", (e) => {
 	} else {
 		addLeftToRightAnimation(languageElements, 1600, 3000);
 	}
-});
+};
+
+// const languageElements = [...document.querySelectorAll(".languages-item")];
+
+// main.addEventListener("scroll", (e) => {
+// 	if (certificatesSlider.style.display === "block") {
+// 		addLeftToRightAnimation(
+// 			languageElements,
+// 			1600 + certificatesSlider.offsetHeight,
+// 			3000 + certificatesSlider.offsetHeight
+// 		);
+// 	} else {
+// 		addLeftToRightAnimation(languageElements, 1600, 3000);
+// 	}
+// });
 
 main.addEventListener("scroll", () => {
 	if (certificatesSlider.style.display === "block") {
@@ -136,6 +144,7 @@ $(".slider").slick({
 
 const buttonProjects = document.querySelector(".projects__button");
 const projectsList = [...document.querySelectorAll(".projects-item")];
+const projectItemFirst = projectsList[0];
 
 const expandBlockEvent = () => {
 	projectsList.forEach((el) => {
@@ -144,6 +153,9 @@ const expandBlockEvent = () => {
 				el.style.opacity = "0";
 				el.style.animation = "expandBlocksClose 0.5s";
 				buttonProjects.lastElementChild.innerHTML = "VIEW&nbsp;ALL&nbsp;PROJECTS";
+				projectItemFirst.scrollIntoView({
+					behavior: "smooth",
+				});
 				window.setTimeout(() => {
 					el.style.display = "none";
 				}, 200);
@@ -152,12 +164,18 @@ const expandBlockEvent = () => {
 				el.style.animation = "expandBlocks 0.5s";
 				el.style.opacity = "1";
 				buttonProjects.lastElementChild.innerHTML = "HIDE&nbsp;ALL&nbsp;PROJECTS";
+				el.scrollIntoView({
+					behavior: "smooth",
+				});
 			}
 		}
 	});
 };
 
-buttonProjects.addEventListener("click", expandBlockEvent);
+buttonProjects.addEventListener("click", (e) => {
+	e.preventDefault();
+	expandBlockEvent();
+});
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 	anchor.addEventListener("click", function (e) {

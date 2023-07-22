@@ -17,6 +17,7 @@ body {
   max-height: 100vh;
   overflow-y: auto;
   scroll-snap-type: y proximity;
+  overscroll-behavior-y: none;
 }
 
 .pageup {
@@ -762,10 +763,9 @@ body {
   transform-style: preserve-3d;
 }
 .projects__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 232px;
+  margin: 8% auto;
+  height: fit-content;
+  width: fit-content;
 }
 .projects__view {
   text-decoration: none;

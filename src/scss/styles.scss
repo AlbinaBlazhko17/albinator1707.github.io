@@ -16,6 +16,7 @@ body {
     max-height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y proximity;
+    overscroll-behavior-y: none;
 }
 
 .pageup {

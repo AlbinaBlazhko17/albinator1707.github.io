@@ -83,10 +83,10 @@
     }
 
     &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 232px;
+        margin: 8% auto;
+        height: fit-content;
+        width: fit-content;
+
     }
 
     &__view {
