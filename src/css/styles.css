@@ -852,9 +852,9 @@ body {
 .footer {
   box-sizing: border-box;
   position: relative;
-  padding: 50px;
+  padding: 30px;
   width: 100%;
-  height: 80px;
+  height: 100%;
   background: #181823;
 }
 .footer__logo {
