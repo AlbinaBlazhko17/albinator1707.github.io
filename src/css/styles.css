@@ -812,17 +812,16 @@ body {
   background-position: fixed;
   background-repeat: no-repeat;
 }
-.business__form form {
+.business__form {
   display: flex;
   flex-direction: column;
 }
 .business__form__input-data {
+  box-sizing: border-box;
   padding: 2px;
   position: relative;
-  margin-top: 8px;
-  margin-bottom: 20px;
   border-radius: 6px;
-  overflow: hidden;
+  margin-top: 30px;
 }
 .business__form__label {
   position: absolute;
@@ -837,6 +836,7 @@ body {
 .business__form .border {
   position: absolute;
   content: "";
+  height: 50%;
   top: 0;
   left: 0;
   width: 0%;
@@ -858,47 +858,43 @@ body {
   outline: none;
   border-radius: 5px;
   padding: 10px 10px;
-  margin-top: 27px;
   z-index: 2;
 }
 .business__form__input {
   height: 50px;
 }
 .business__form__input[value=""] ~ .business__form__label .business__form__input:not(:focus) ~ .business__form__label, .business__form__input ~ .business__form__label {
-  top: 42%;
+  top: 8%;
   left: 2%;
 }
 .business__form__input:focus ~ .business__form__label, .business__form__input:not([value=""]) ~ .business__form__label {
-  top: -13px;
+  top: -65%;
   text-shadow: rgb(236, 91, 236) 1px 0 4px;
   font-size: 20px;
 }
 .business__form__input:focus ~ .border {
-  margin-top: 27px;
   width: 100%;
-  height: 85%;
+  height: 100%;
 }
 .business__form__input ~ .border {
-  margin-top: 27px;
+  width: 0%;
+  height: 0%;
 }
 .business__form__textarea {
   height: 100px;
   resize: none;
-}
-.business__form__textarea ~ .border {
-  margin-top: 27px;
 }
 .business__form__textarea:focus ~ .border {
   width: 100%;
   height: 100%;
 }
 .business__form__textarea :not(:focus) ~ .business__form__label, .business__form__textarea[value=""] ~ .business__form__label, .business__form__textarea ~ .business__form__label {
-  top: 22%;
+  top: 8%;
   left: 2%;
   resize: none;
 }
 .business__form__textarea:focus ~ .business__form__label, .business__form__textarea:not([value=""]) ~ .business__form__label {
-  top: -10%;
+  top: -36%;
   left: 2%;
   resize: none;
   text-shadow: rgb(236, 91, 236) 1px 0 4px;
@@ -920,6 +916,16 @@ body {
   border: none;
   background: #5221E6;
   height: 75px;
+}
+
+.octavalidate-txt-error {
+  position: absolute;
+  z-index: 3;
+  top: -53%;
+  right: 0;
+  color: red !important;
+  margin: 6px 0px 0px 8px !important;
+  transition: 0.5s;
 }
 
 .footer {

@@ -11,19 +11,15 @@
     background-position: fixed;
     background-repeat: no-repeat;
     &__form {
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+        display: flex;
+        flex-direction: column;
 
         &__input-data {
+            box-sizing: border-box;
             padding: 2px;
             position: relative;
-            margin-top: 8px;
-            margin-bottom: 20px;
             border-radius: 6px;
-            overflow: hidden;
+            margin-top: 30px;
         }
 
         &__label {
@@ -40,6 +36,7 @@
         .border {
             position: absolute;
             content: '';
+            height: 50%;
             top: 0;
             left: 0;
             width: 0%;
@@ -62,7 +59,6 @@
             outline: none;
             border-radius: 5px;
             padding: 10px 10px;
-            margin-top: 27px;
             z-index: 2;
         }
 
@@ -72,35 +68,33 @@
             &[value=""] ~ .business__form__label
             &:not(:focus) ~ .business__form__label,
             & ~ .business__form__label {
-                top: 42%;
+                top: 8%;
                 left: 2%;
             }
 
             &:focus ~ .business__form__label,
             &:not([value=""]) ~ .business__form__label {
-                top: -13px;
+                top: -65%;
                 text-shadow: rgb(236, 91, 236) 1px 0 4px;
                 font-size: 20px;
             }
 
-            &:focus ~ .border{
-                margin-top: 27px;
+            
+            &:focus ~ .border {
                 width: 100%;
-                height: 85%;
+                height: 100%;
             }
 
-            & ~ .border{
-                margin-top: 27px;
+            & ~ .border {
+                width: 0%;
+                height: 0%;
+
             }
         }
 
         &__textarea {
             height: 100px;
             resize: none;
-
-            & ~ .border{
-                margin-top: 27px;
-            }
 
             &:focus ~ .border{
                 width: 100%;
@@ -110,14 +104,14 @@
             :not(:focus) ~ .business__form__label,
             &[value=""] ~ .business__form__label,
             & ~ .business__form__label {
-                top: 22%;
+                top: 8%;
                 left: 2%;
                 resize: none;
             }
 
             &:focus ~ .business__form__label,
             &:not([value=""]) ~ .business__form__label {
-                top: -10%;
+                top: -36%;
                 left: 2%;
                 resize: none;
                 text-shadow: rgb(236, 91, 236) 1px 0 4px;
@@ -144,4 +138,14 @@
             height: 75px;
         }
     }
+}
+
+.octavalidate-txt-error {
+    position: absolute;
+    z-index: 3;
+    top: -53%;
+    right: 0;
+    color: red !important;
+    margin: 6px 0px 0px 8px !important;
+    transition: 0.5s;
 }

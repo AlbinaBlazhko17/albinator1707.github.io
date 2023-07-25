@@ -8,7 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.2-dev/css/formValidation.min.css" integrity="sha512-B9GRVQaYJ7aMZO3WC2UvS9xds1D+gWQoNiXiZYRlqIVszL073pHXi0pxWxVycBk0fnacKIE3UHuWfSeETDCe7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/styles.min.css" rel="stylesheet">
 </head>
 <body>
@@ -863,20 +863,20 @@
             <div class="subtitle">Now that you know a lot about me, let me know if you are interested to work with me.</div>
         </div>
         <div class="business__row">
-            <div class="business__form">
-                <form action="submit">
+            <div>
+                <form class="business__form" id="new_form" method="POST">
                    <div class="business__form__input-data">
-                        <input type="name" onkeyup="this.setAttribute('value', this.value);" value="" class="business__form__input" required >
-                        <label for="name" class="business__form__label">Name</label>
+                        <input type="name" name="username" onkeyup="this.setAttribute('value', this.value);" value="" class="business__form__input" id="inp_uname"  octavalidate="R,USERNAME" minlength="3" maxlength="50" autocomplete="off" required >
                         <div class="border"></div>
+                        <label for="name" class="business__form__label">Name</label>
                    </div>
                     <div class="business__form__input-data">
-                        <input type="email" onkeyup="this.setAttribute('value', this.value);" value=""class="business__form__input" required>
+                        <input type="email" name="email" onkeyup="this.setAttribute('value', this.value);" value="" class="business__form__input" id="inp_email" octavalidate="R,EMAIL" required>
                         <label for="email" class="business__form__label">E-mail</label>
                         <div class="border"></div>
                     </div>
                    <div class="business__form__input-data">
-                        <textarea name="text" id="text" cols="30" rows="7" class="business__form__textarea" onkeyup="this.setAttribute('value', this.value);" value=""></textarea>
+                        <textarea name="text" id="text" cols="30" rows="7" class="business__form__textarea" onkeyup="this.setAttribute('value', this.value);" value="" minlength="10" maxlength="200"></textarea>
                         <label for="text" class="business__form__label">Message</label>
                         <div class="border"></div>
                    </div>
@@ -912,7 +912,9 @@
 </div>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+<!-- <script src="js/valid-form.min.js"></script> -->
+<script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

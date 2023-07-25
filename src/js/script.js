@@ -175,3 +175,64 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 		});
 	});
 });
+
+let formVal = new octaValidate("new_form");
+
+const validationErrorClass = "octavalidate-txt-error";
+const parentErrorClass = "octavalidate-txt-error";
+const inputs = document.querySelectorAll("input, select, textarea");
+
+// inputs.forEach(function (input) {
+// 	function checkValidity(options) {
+// 		const insertError = options.insertError;
+// 		const parent = input.parentNode;
+// 		const error =
+// 			parent.querySelector(`.${validationErrorClass}`) || document.createElement("div");
+
+// 		if (!input.validity.valid && input.validationMessage) {
+// 			error.className = validationErrorClass;
+// 			error.textContent = input.validationMessage;
+
+// 			if (insertError) {
+// 				parent.insertBefore(error, input);
+// 				parent.classList.add(parentErrorClass);
+// 			}
+// 		} else {
+// 			parent.classList.remove(parentErrorClass);
+// 			error.remove();
+// 		}
+// 	}
+
+// 	input.addEventListener("input", function () {
+// 		// We can only update the error or hide it on input.
+// 		// Otherwise it will show when typing.
+// 		checkValidity({ insertError: false });
+// 	});
+// 	input.addEventListener("invalid", function (e) {
+// 		// prevent showing the default display
+// 		e.preventDefault();
+
+// 		// We can also create the error in invalid.
+// 		checkValidity({ insertError: true });
+// 	});
+// });
+
+// document.querySelector("#new_form").addEventListener("submit", function (e) {
+// 	//prevent default action
+// 	e.preventDefault();
+// 	//invoke the validate method
+// 	if (formVal.validate() === true) {
+// 		//validation successful
+// 		alert("form has been submitted");
+// 	} else {
+// 	}
+// });
+inputs.forEach((input) => {
+	input.addEventListener("invalid", function (e) {
+		e.preventDefault();
+
+		if (formVal.validate() === true) {
+		} else {
+		}
+	});
+});
