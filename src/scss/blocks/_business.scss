@@ -17,23 +17,113 @@
             flex-direction: column;
         }
 
-        label {
-            font-size: 16px;
+        &__input-data {
+            padding: 2px;
+            position: relative;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            overflow: hidden;
         }
 
-        input {
-            border: none;
-            margin-top: 8px;
-            margin-bottom: 40px;
-            height: 50px;;
-            background: #181823;
+        &__label {
+            position: absolute;
+            font-size: 20px;
+            width: 100%;
+            height: 50%;
+            pointer-events: none;
+            padding: 10px 0;
+            z-index: 3;
+            transition: 0.2s;
         }
-        
-        #text {
-           border: none;
-           background: #181823;
-           margin-top: 8px;
-           resize: none;
+
+        .border {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 0%;
+            background: #ee4f86;
+            transition: height 0.3s, width 0.3s 0.1s;
+            border-radius: 5px;
+        }
+
+        &__input, &__textarea {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            background-color: #181823;
+            border: none;
+            font-size: 17px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            position: relative;
+            outline: none;
+            border-radius: 5px;
+            padding: 10px 10px;
+            margin-top: 27px;
+            z-index: 2;
+        }
+
+        &__input {
+            height: 50px;
+
+            &[value=""] ~ .business__form__label
+            &:not(:focus) ~ .business__form__label,
+            & ~ .business__form__label {
+                top: 42%;
+                left: 2%;
+            }
+
+            &:focus ~ .business__form__label,
+            &:not([value=""]) ~ .business__form__label {
+                top: -13px;
+                text-shadow: rgb(236, 91, 236) 1px 0 4px;
+                font-size: 20px;
+            }
+
+            &:focus ~ .border{
+                margin-top: 27px;
+                width: 100%;
+                height: 85%;
+            }
+
+            & ~ .border{
+                margin-top: 27px;
+            }
+        }
+
+        &__textarea {
+            height: 100px;
+            resize: none;
+
+            & ~ .border{
+                margin-top: 27px;
+            }
+
+            &:focus ~ .border{
+                width: 100%;
+                height: 100%;
+            }
+
+            :not(:focus) ~ .business__form__label,
+            &[value=""] ~ .business__form__label,
+            & ~ .business__form__label {
+                top: 22%;
+                left: 2%;
+                resize: none;
+            }
+
+            &:focus ~ .business__form__label,
+            &:not([value=""]) ~ .business__form__label {
+                top: -10%;
+                left: 2%;
+                resize: none;
+                text-shadow: rgb(236, 91, 236) 1px 0 4px;
+                font-size: 20px;
+                resize: none;
+            }
         }
     }
 
@@ -48,8 +138,8 @@
         button {
             cursor: pointer;
             width: 60%;
+            margin-top: 30px;
             border: none;
-            margin-top: 40px;
             background: #5221E6;
             height: 75px;
         }

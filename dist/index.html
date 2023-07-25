@@ -865,12 +865,21 @@
         <div class="business__row">
             <div class="business__form">
                 <form action="submit">
-                    <label for="name">Name</label>
-                    <input type="name">
-                    <label for="email">E-mail</label>
-                    <input type="email">
-                    <label for="text">Message</label>
-                    <textarea name="text" id="text" cols="30" rows="7"></textarea>
+                   <div class="business__form__input-data">
+                        <input type="name" onkeyup="this.setAttribute('value', this.value);" value="" class="business__form__input" required >
+                        <label for="name" class="business__form__label">Name</label>
+                        <div class="border"></div>
+                   </div>
+                    <div class="business__form__input-data">
+                        <input type="email" onkeyup="this.setAttribute('value', this.value);" value=""class="business__form__input" required>
+                        <label for="email" class="business__form__label">E-mail</label>
+                        <div class="border"></div>
+                    </div>
+                   <div class="business__form__input-data">
+                        <textarea name="text" id="text" cols="30" rows="7" class="business__form__textarea" onkeyup="this.setAttribute('value', this.value);" value=""></textarea>
+                        <label for="text" class="business__form__label">Message</label>
+                        <div class="border"></div>
+                   </div>
                     <div class="business__button">
                         <button type="submit">LET’S GET STARTED</button>
                     </div>

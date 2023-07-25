@@ -816,20 +816,93 @@ body {
   display: flex;
   flex-direction: column;
 }
-.business__form label {
-  font-size: 16px;
-}
-.business__form input {
-  border: none;
+.business__form__input-data {
+  padding: 2px;
+  position: relative;
   margin-top: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.business__form__label {
+  position: absolute;
+  font-size: 20px;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+  padding: 10px 0;
+  z-index: 3;
+  transition: 0.2s;
+}
+.business__form .border {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background: #ee4f86;
+  transition: height 0.3s, width 0.3s 0.1s;
+  border-radius: 5px;
+}
+.business__form__input, .business__form__textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  background-color: #181823;
+  border: none;
+  font-size: 17px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-top: 27px;
+  z-index: 2;
+}
+.business__form__input {
   height: 50px;
-  background: #181823;
 }
-.business__form #text {
-  border: none;
-  background: #181823;
-  margin-top: 8px;
+.business__form__input[value=""] ~ .business__form__label .business__form__input:not(:focus) ~ .business__form__label, .business__form__input ~ .business__form__label {
+  top: 42%;
+  left: 2%;
+}
+.business__form__input:focus ~ .business__form__label, .business__form__input:not([value=""]) ~ .business__form__label {
+  top: -13px;
+  text-shadow: rgb(236, 91, 236) 1px 0 4px;
+  font-size: 20px;
+}
+.business__form__input:focus ~ .border {
+  margin-top: 27px;
+  width: 100%;
+  height: 85%;
+}
+.business__form__input ~ .border {
+  margin-top: 27px;
+}
+.business__form__textarea {
+  height: 100px;
+  resize: none;
+}
+.business__form__textarea ~ .border {
+  margin-top: 27px;
+}
+.business__form__textarea:focus ~ .border {
+  width: 100%;
+  height: 100%;
+}
+.business__form__textarea :not(:focus) ~ .business__form__label, .business__form__textarea[value=""] ~ .business__form__label, .business__form__textarea ~ .business__form__label {
+  top: 22%;
+  left: 2%;
+  resize: none;
+}
+.business__form__textarea:focus ~ .business__form__label, .business__form__textarea:not([value=""]) ~ .business__form__label {
+  top: -10%;
+  left: 2%;
+  resize: none;
+  text-shadow: rgb(236, 91, 236) 1px 0 4px;
+  font-size: 20px;
   resize: none;
 }
 .business .subtitle {
@@ -843,8 +916,8 @@ body {
 .business__button button {
   cursor: pointer;
   width: 60%;
+  margin-top: 30px;
   border: none;
-  margin-top: 40px;
   background: #5221E6;
   height: 75px;
 }
