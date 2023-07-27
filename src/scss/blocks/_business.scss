@@ -25,7 +25,7 @@
         &__label {
             position: absolute;
             font-size: 20px;
-            width: 100%;
+            width: 50%;
             height: 50%;
             pointer-events: none;
             padding: 10px 0;
@@ -118,6 +118,9 @@
                 font-size: 20px;
                 resize: none;
             }
+            & ~ .octavalidate-txt-error {
+                top: -25%;
+            }
         }
     }
 
@@ -149,3 +152,4 @@
     margin: 6px 0px 0px 8px !important;
     transition: 0.5s;
 }
+

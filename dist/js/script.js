@@ -10,6 +10,13 @@ let timer = [],
 	counter = 0,
 	isAnimated = false;
 
+let tg = {
+	token: "6212414082:AAFnyD7Aw5maZUaD5kR5f8DYO4fULCzXgcA",
+	chat_id: "-1001830104792",
+};
+
+// MicroModal.init();
+
 $(".certificates__slider").slick({
 	infinite: true,
 	slidesToShow: 1,
@@ -176,63 +183,50 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 	});
 });
 
-let formVal = new octaValidate("new_form");
+const form = document.getElementById("new_form");
 
-const validationErrorClass = "octavalidate-txt-error";
-const parentErrorClass = "octavalidate-txt-error";
+let formVal = new octaValidate("new_form");
 const inputs = document.querySelectorAll("input, select, textarea");
 
-// inputs.forEach(function (input) {
-// 	function checkValidity(options) {
-// 		const insertError = options.insertError;
-// 		const parent = input.parentNode;
-// 		const error =
-// 			parent.querySelector(`.${validationErrorClass}`) || document.createElement("div");
+function sendMessage(text) {
+	const url = `https://api.telegram.org/bot${tg.token}/sendMessage?chat_id=${tg.chat_id}&text=${text}&parse_mode=HTML`; // The url to request
+	const xht = new XMLHttpRequest();
+	xht.open("POST", url);
+	xht.send();
+}
 
-// 		if (!input.validity.valid && input.validationMessage) {
-// 			error.className = validationErrorClass;
-// 			error.textContent = input.validationMessage;
-
-// 			if (insertError) {
-// 				parent.insertBefore(error, input);
-// 				parent.classList.add(parentErrorClass);
-// 			}
-// 		} else {
-// 			parent.classList.remove(parentErrorClass);
-// 			error.remove();
-// 		}
-// 	}
-
-// 	input.addEventListener("input", function () {
-// 		// We can only update the error or hide it on input.
-// 		// Otherwise it will show when typing.
-// 		checkValidity({ insertError: false });
-// 	});
-// 	input.addEventListener("invalid", function (e) {
-// 		// prevent showing the default display
-// 		e.preventDefault();
-
-// 		// We can also create the error in invalid.
-// 		checkValidity({ insertError: true });
-// 	});
-// });
-
-// document.querySelector("#new_form").addEventListener("submit", function (e) {
-// 	//prevent default action
-// 	e.preventDefault();
-// 	//invoke the validate method
-// 	if (formVal.validate() === true) {
-// 		//validation successful
-// 		alert("form has been submitted");
-// 	} else {
-// 	}
-// });
 inputs.forEach((input) => {
 	input.addEventListener("invalid", function (e) {
 		e.preventDefault();
+		formVal.validate();
+	});
+});
 
+inputs.forEach((input) => {
+	input.addEventListener("valid", function (e) {
+		e.preventDefault();
+		formVal.validate();
+	});
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+	form.addEventListener("submit", (e) => {
+		e.preventDefault();
 		if (formVal.validate() === true) {
-		} else {
+			const username = document.getElementById("inp_uname").value;
+			const email = document.getElementById("inp_email").value;
+			const text = document.getElementById("text").value;
+
+			MicroModal.show("modal-1");
+
+			for (let i = 0; i < form.length; i++) {
+				form[i].value = "";
+				form[i].setAttribute("value", "");
+			}
+
+			sendMessage(
+				`<b>Username:</b> ${username}%0A<b>Email:</b> ${email}%0A<b>Text</b>: ${text}`
+			);
 		}
 	});
 });
