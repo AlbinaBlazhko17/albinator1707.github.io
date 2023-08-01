@@ -1,18 +1,22 @@
 .certificates {
 	display: none;
-	// scroll-snap-align: end;
 	height: 100vh;
-	overflow: scroll;
+	padding: 0 5%;
 	&__slider {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 0 auto;
-		width: 2000px;
+		margin-top: 5%;
+		width: 100%;
+		.slick-list {
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
 		&-item {
 			text-align: center;
 			padding: 0 200px;
-			height: 1000px;
+			height: 800px;
 			img {
 				width: 100%;
 				display: block;

@@ -296,8 +296,8 @@ body {
 .main__descr {
   font-weight: 400;
   font-size: 18px;
-  white-space: nowrap;
   line-height: 150%;
+  margin-right: 5%;
 }
 .main__links {
   margin-top: 100px;
@@ -386,7 +386,6 @@ body {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 15%;
   scroll-snap-align: center;
 }
 .diplomas::after {
@@ -470,19 +469,23 @@ body {
 .certificates {
   display: none;
   height: 100vh;
-  overflow: scroll;
+  padding: 0 5%;
 }
 .certificates__slider {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  width: 2000px;
+  margin-top: 5%;
+  width: 100%;
+}
+.certificates__slider .slick-list {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .certificates__slider-item {
   text-align: center;
   padding: 0 200px;
-  height: 1000px;
+  height: 800px;
 }
 .certificates__slider-item img {
   width: 100%;
@@ -554,6 +557,7 @@ body {
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
+  margin-top: 10%;
   margin-bottom: 5%;
 }
 .skills__hr {
@@ -1141,5 +1145,202 @@ Demo Animation Style
   .certificates__bg :nth-child(3) {
     right: 55%;
     top: 180%;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 1919px) {
+  .main {
+    margin-bottom: 10%;
+  }
+  .skills {
+    height: 110vh;
+    scroll-snap-align: none;
+    margin-bottom: 10%;
+  }
+  .slider {
+    margin-top: 9%;
+    margin-bottom: 5%;
+  }
+  .slider .border-left {
+    width: 2.96% !important;
+    border-left: 3px solid #979798;
+  }
+  .slider .border-right {
+    width: 2.92% !important;
+    border-right: 3px solid #979798;
+  }
+  .business {
+    padding: 120px 240px;
+  }
+}
+@media all and (min-width: 1536px) and (max-width: 1559px) {
+  .main {
+    margin-bottom: 10%;
+  }
+  .slider {
+    margin-top: 9%;
+    margin-bottom: 5%;
+  }
+  .slider .border-left {
+    width: 2.96% !important;
+    border-left: 3px solid #979798;
+  }
+  .slider .border-right {
+    width: 2.92% !important;
+    border-right: 3px solid #979798;
+  }
+  .skills {
+    height: 110vh;
+    scroll-snap-align: none;
+    margin-bottom: 10%;
+  }
+  .business {
+    padding: 120px 230px;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1535px) {
+  .main {
+    margin-bottom: 10%;
+  }
+  .slider {
+    margin-top: 9%;
+    margin-bottom: 5%;
+  }
+  .slider .border-left {
+    width: 2.96% !important;
+    border-left: 3px solid #979798;
+  }
+  .slider .border-right {
+    width: 2.95% !important;
+    border-right: 2px solid #979798;
+  }
+  .certificates__slider {
+    margin-top: 20%;
+  }
+  .skills {
+    height: 110vh;
+    scroll-snap-align: none;
+    margin-bottom: 10%;
+  }
+  .languages__list li {
+    font-size: 35px;
+  }
+  .business {
+    padding: 120px 180px;
+  }
+}
+@media all and (min-width: 1366px) and (max-width: 1439px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    margin-bottom: 10%;
+  }
+  .main__img {
+    width: 45%;
+  }
+  .main__img img {
+    width: 100%;
+  }
+  .main__imgbg {
+    right: -10%;
+    left: 3%;
+  }
+  .main__imgbg img {
+    width: 100%;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .certificates__slider {
+    margin-top: 20%;
+  }
+  .slider {
+    margin-top: 9%;
+    margin-bottom: 5%;
+  }
+  .slider .border-left {
+    width: 2.96% !important;
+    border-left: 3px solid #979798;
+  }
+  .slider .border-right {
+    width: 2.93% !important;
+    border-right: 2px solid #979798;
+  }
+  .skills {
+    height: 110vh;
+    scroll-snap-align: none;
+    margin-bottom: 10%;
+  }
+  .languages__list li {
+    font-size: 35px;
+  }
+  .business {
+    padding: 120px 180px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+  .title {
+    font-size: 40px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .main {
+    column-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10%;
+  }
+  .main__img {
+    width: 45%;
+  }
+  .main__img img {
+    width: 100%;
+  }
+  .main__imgbg {
+    right: -10%;
+    left: 3%;
+  }
+  .main__imgbg img {
+    width: 100%;
+  }
+  .main__about {
+    padding-top: 90px;
+  }
+  .diplomas__container {
+    height: 450px;
+    padding: 50px 40px 20px 40px;
+  }
+  .diplomas__list {
+    margin-top: 50px;
+  }
+  .skills {
+    margin-top: 15%;
+    height: 120vh;
+    scroll-snap-align: none;
+    margin-bottom: 10%;
+  }
+  .skills__hard {
+    padding: 20px 50px;
+  }
+  .slider {
+    margin-top: 9%;
+    margin-bottom: 6%;
+  }
+  .slider .border-left {
+    width: 2.9% !important;
+    border-left: 2px solid #979798;
+  }
+  .slider .border-right {
+    width: 2.94% !important;
+    border-right: 2px solid #979798;
+  }
+  .languages__list li {
+    font-size: 25px;
+  }
+  .business {
+    padding: 120px 150px;
+    height: 600px;
   }
 }

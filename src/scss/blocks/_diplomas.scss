@@ -2,7 +2,6 @@
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    margin-bottom: 15%;
     scroll-snap-align: center;
     &::after {
         @include dipomasBorder;
