@@ -1,7 +1,8 @@
 .certificates {
 	display: none;
-	scroll-snap-align: center;
-	margin-bottom: 100px;
+	// scroll-snap-align: end;
+	height: 100vh;
+	overflow: scroll;
 	&__slider {
 		display: flex;
 		justify-content: center;

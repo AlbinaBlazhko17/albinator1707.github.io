@@ -1,9 +1,8 @@
 .diplomas {
-    margin-top: 100px;
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    margin-bottom: 250px;
+    margin-bottom: 15%;
     scroll-snap-align: center;
     &::after {
         @include dipomasBorder;

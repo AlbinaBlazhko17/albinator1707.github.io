@@ -1,0 +1,27 @@
+@media all and (min-width: 2560px) {
+	.slider {
+		.border-left {
+            width: 2.96% !important;
+            border-left: 3px solid #979798;
+        }
+        .border-right {
+            width: 2.85% !important;
+            border-right: 4px solid #979798;
+        }
+	}
+
+	.certificates {
+		&__bg {
+			:nth-child(1) {
+				top: 175%;
+			}
+			:nth-child(2) {
+				top: 210.63%;
+			}
+			:nth-child(3) {
+				right: 55%;
+				top: 180%;
+			}
+		}
+	}
+}

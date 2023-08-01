@@ -194,8 +194,8 @@ body {
   position: absolute;
   top: 20%;
   right: 2%;
-  width: 631.42px;
-  height: 255.37px;
+  width: 40%;
+  height: 25%;
   background: #FE3CB9;
   filter: blur(150px);
   transform: matrix(0.87, 0.54, -0.47, 0.86, 0, 0);
@@ -206,8 +206,8 @@ body {
   position: absolute;
   right: 8.12%;
   top: 52.63%;
-  width: 1094.78px;
-  height: 317.72px;
+  width: 55%;
+  height: 30%;
   background: #793AFF;
   filter: blur(150px);
   transform: matrix(0.97, -0.22, 0.22, 0.98, 0, 0);
@@ -218,8 +218,8 @@ body {
   position: absolute;
   right: 34.82%;
   top: 19.52%;
-  width: 535.13px;
-  height: 323.51px;
+  width: 25%;
+  height: 30%;
   background: #69FFFF;
   filter: blur(150px);
   transform: matrix(0.8, -0.62, 0.6, 0.79, 0, 0);
@@ -383,11 +383,10 @@ body {
 }
 
 .diplomas {
-  margin-top: 100px;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 250px;
+  margin-bottom: 15%;
   scroll-snap-align: center;
 }
 .diplomas::after {
@@ -470,8 +469,8 @@ body {
 
 .certificates {
   display: none;
-  scroll-snap-align: center;
-  margin-bottom: 100px;
+  height: 100vh;
+  overflow: scroll;
 }
 .certificates__slider {
   display: flex;
@@ -555,7 +554,7 @@ body {
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 .skills__hr {
   width: 267px;
@@ -631,9 +630,9 @@ body {
   padding: 40px 70px;
 }
 .languages__list {
-  display: grid;
-  grid-template-columns: 500px 500px 500px;
-  gap: 270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
   margin-top: 60px;
 }
@@ -642,6 +641,9 @@ body {
   opacity: 0;
   visibility: hidden;
   font-size: 40px;
+}
+.languages__list li:first-child {
+  margin-right: 22px;
 }
 .languages__list li:last-child {
   margin-right: 0;
@@ -664,10 +666,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 5%;
   padding: 0 200px;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 1%;
 }
 .slider-item {
   box-sizing: border-box;
@@ -1119,4 +1121,25 @@ Demo Animation Style
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+@media all and (min-width: 2560px) {
+  .slider .border-left {
+    width: 2.96% !important;
+    border-left: 3px solid #979798;
+  }
+  .slider .border-right {
+    width: 2.85% !important;
+    border-right: 4px solid #979798;
+  }
+  .certificates__bg :nth-child(1) {
+    top: 175%;
+  }
+  .certificates__bg :nth-child(2) {
+    top: 210.63%;
+  }
+  .certificates__bg :nth-child(3) {
+    right: 55%;
+    top: 180%;
+  }
 }

@@ -5,7 +5,8 @@ const main = document.querySelector(".wrapper"),
 	pageUpButton = document.querySelector(".buttonup"),
 	diplomasBlock = document.querySelector(".diplomas"),
 	certificatesButton = document.querySelector(".diplomas__certificates"),
-	certificatesSlider = document.querySelector(".certificates");
+	certificatesSlider = document.querySelector(".certificates"),
+	certificatesContainer = document.querySelector(".certificates__slider");
 let timer = [],
 	counter = 0,
 	isAnimated = false;
@@ -14,8 +15,6 @@ let tg = {
 	token: "6212414082:AAFnyD7Aw5maZUaD5kR5f8DYO4fULCzXgcA",
 	chat_id: "-1001830104792",
 };
-
-// MicroModal.init();
 
 $(".certificates__slider").slick({
 	infinite: true,
@@ -61,8 +60,9 @@ certificatesButton.addEventListener("click", (e) => {
 	if (certificatesSlider.style.display === "" || certificatesSlider.style.display === "none") {
 		certificatesSlider.style.display = "block";
 		$(".certificates__slider").slick("refresh");
-		certificatesSlider.scrollIntoView({
+		certificatesContainer.scrollIntoView({
 			behavior: "smooth",
+			block: "center",
 		});
 	} else if (certificatesSlider.style.display === "block") {
 		certificatesSlider.style.display = "none";
@@ -105,7 +105,7 @@ const circlesAnimation = (height) => {
 	}
 
 	const diplomasElements = [...document.querySelectorAll(".diplomas-item")];
-	addLeftToRightAnimation(diplomasElements, 900, 1500);
+	addLeftToRightAnimation(diplomasElements, 700, 1500);
 
 	const languageElements = [...document.querySelectorAll(".languages-item")];
 
